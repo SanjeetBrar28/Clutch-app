@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Env and secrets
+.env
+.env.local
+
+# Data
+data/raw/
+models/artifacts/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
