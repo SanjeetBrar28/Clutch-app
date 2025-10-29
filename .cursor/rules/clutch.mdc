@@ -6,6 +6,7 @@ Clutch Collaboration Rules (Cursor)
 You are operating in collaborative mode with human-in-the-loop reasoning for Clutch, a sports-analytics app that quantifies in-game player impact beyond box scores. Your role is a rational problem-solving partner across data, modeling, backend, and UI.
 Always Do
 Think logically and systematically; keep steps small and reversible.
+Explain each step clearly. Break it down so it is digestible for a new coder
 Break work into clear, testable units (data → features → model → API → UI).
 Prefer minimal effective solutions and baselines before complexity.
 Make assumptions explicit; log them in context/clutch/assumptions.md.

@@ -1,0 +1,333 @@
+2025-10-28 22:26:57,314 - backend.services.data_ingestion.game_utils - INFO - Fetching game IDs for Indiana Pacers (ID: 1610612754) for season 2024-25
+2025-10-28 22:27:05,426 - backend.services.data_ingestion.game_utils - INFO - Successfully fetched 109 games for Indiana Pacers
+2025-10-28 22:27:05,426 - backend.services.data_ingestion.game_utils - INFO - Fetching game IDs for Indiana Pacers (ID: 1610612754) for season 2024-25
+2025-10-28 22:27:06,097 - backend.services.data_ingestion.game_utils - INFO - Successfully fetched 109 games for Indiana Pacers
+2025-10-28 22:27:06,178 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400407
+2025-10-28 22:27:07,003 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 542 plays for game 0042400407
+2025-10-28 22:27:07,012 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 542 plays to data/raw/playbyplay/0042400407.csv
+2025-10-28 22:27:07,013 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400406
+2025-10-28 22:27:07,741 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 521 plays for game 0042400406
+2025-10-28 22:27:07,746 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 521 plays to data/raw/playbyplay/0042400406.csv
+2025-10-28 22:27:07,747 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400405
+2025-10-28 22:27:08,470 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 581 plays for game 0042400405
+2025-10-28 22:27:08,476 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 581 plays to data/raw/playbyplay/0042400405.csv
+2025-10-28 22:27:08,476 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400404
+2025-10-28 22:27:09,705 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 539 plays for game 0042400404
+2025-10-28 22:27:09,711 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 539 plays to data/raw/playbyplay/0042400404.csv
+2025-10-28 22:27:09,711 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400403
+2025-10-28 22:27:11,804 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 521 plays for game 0042400403
+2025-10-28 22:27:11,810 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 521 plays to data/raw/playbyplay/0042400403.csv
+2025-10-28 22:27:11,810 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400402
+2025-10-28 22:27:12,859 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 516 plays for game 0042400402
+2025-10-28 22:27:12,866 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 516 plays to data/raw/playbyplay/0042400402.csv
+2025-10-28 22:27:12,866 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400401
+2025-10-28 22:27:14,234 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 524 plays for game 0042400401
+2025-10-28 22:27:14,238 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 524 plays to data/raw/playbyplay/0042400401.csv
+2025-10-28 22:27:14,239 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400306
+2025-10-28 22:27:15,475 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 505 plays for game 0042400306
+2025-10-28 22:27:15,481 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 505 plays to data/raw/playbyplay/0042400306.csv
+2025-10-28 22:27:15,482 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400305
+2025-10-28 22:27:17,587 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 504 plays for game 0042400305
+2025-10-28 22:27:17,593 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 504 plays to data/raw/playbyplay/0042400305.csv
+2025-10-28 22:27:17,593 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400304
+2025-10-28 22:27:18,627 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 525 plays for game 0042400304
+2025-10-28 22:27:18,632 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 525 plays to data/raw/playbyplay/0042400304.csv
+2025-10-28 22:27:18,632 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400303
+2025-10-28 22:27:19,675 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 501 plays for game 0042400303
+2025-10-28 22:27:19,683 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 501 plays to data/raw/playbyplay/0042400303.csv
+2025-10-28 22:27:19,683 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400302
+2025-10-28 22:27:21,311 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 461 plays for game 0042400302
+2025-10-28 22:27:21,317 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 461 plays to data/raw/playbyplay/0042400302.csv
+2025-10-28 22:27:21,318 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400301
+2025-10-28 22:27:22,307 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 585 plays for game 0042400301
+2025-10-28 22:27:22,315 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 585 plays to data/raw/playbyplay/0042400301.csv
+2025-10-28 22:27:22,315 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400205
+2025-10-28 22:27:23,873 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 535 plays for game 0042400205
+2025-10-28 22:27:23,882 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 535 plays to data/raw/playbyplay/0042400205.csv
+2025-10-28 22:27:23,882 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400204
+2025-10-28 22:27:24,941 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 499 plays for game 0042400204
+2025-10-28 22:27:24,948 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 499 plays to data/raw/playbyplay/0042400204.csv
+2025-10-28 22:27:24,949 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400203
+2025-10-28 22:27:25,873 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 576 plays for game 0042400203
+2025-10-28 22:27:25,881 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 576 plays to data/raw/playbyplay/0042400203.csv
+2025-10-28 22:27:25,882 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400202
+2025-10-28 22:27:26,815 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 555 plays for game 0042400202
+2025-10-28 22:27:26,821 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 555 plays to data/raw/playbyplay/0042400202.csv
+2025-10-28 22:27:26,822 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400201
+2025-10-28 22:27:27,696 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 480 plays for game 0042400201
+2025-10-28 22:27:27,704 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 480 plays to data/raw/playbyplay/0042400201.csv
+2025-10-28 22:27:27,705 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400135
+2025-10-28 22:27:28,913 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 529 plays for game 0042400135
+2025-10-28 22:27:28,917 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 529 plays to data/raw/playbyplay/0042400135.csv
+2025-10-28 22:27:28,917 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400134
+2025-10-28 22:27:30,161 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 446 plays for game 0042400134
+2025-10-28 22:27:30,168 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 446 plays to data/raw/playbyplay/0042400134.csv
+2025-10-28 22:27:30,168 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400133
+2025-10-28 22:27:31,301 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 484 plays for game 0042400133
+2025-10-28 22:27:31,308 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 484 plays to data/raw/playbyplay/0042400133.csv
+2025-10-28 22:27:31,309 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400132
+2025-10-28 22:27:32,351 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 462 plays for game 0042400132
+2025-10-28 22:27:32,359 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 462 plays to data/raw/playbyplay/0042400132.csv
+2025-10-28 22:27:32,359 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400131
+2025-10-28 22:27:33,382 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0042400131
+2025-10-28 22:27:33,389 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/0042400131.csv
+2025-10-28 22:27:33,390 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401189
+2025-10-28 22:27:34,737 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 634 plays for game 0022401189
+2025-10-28 22:27:34,745 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 634 plays to data/raw/playbyplay/0022401189.csv
+2025-10-28 22:27:34,745 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401172
+2025-10-28 22:27:35,733 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 524 plays for game 0022401172
+2025-10-28 22:27:35,741 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 524 plays to data/raw/playbyplay/0022401172.csv
+2025-10-28 22:27:35,741 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401168
+2025-10-28 22:27:36,778 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0022401168
+2025-10-28 22:27:36,784 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/0022401168.csv
+2025-10-28 22:27:36,784 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401148
+2025-10-28 22:27:37,962 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 495 plays for game 0022401148
+2025-10-28 22:27:37,968 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 495 plays to data/raw/playbyplay/0022401148.csv
+2025-10-28 22:27:37,969 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401142
+2025-10-28 22:27:38,882 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 482 plays for game 0022401142
+2025-10-28 22:27:38,888 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 482 plays to data/raw/playbyplay/0022401142.csv
+2025-10-28 22:27:38,888 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401119
+2025-10-28 22:27:39,925 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 533 plays for game 0022401119
+2025-10-28 22:27:39,929 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 533 plays to data/raw/playbyplay/0022401119.csv
+2025-10-28 22:27:39,929 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401104
+2025-10-28 22:27:41,013 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 441 plays for game 0022401104
+2025-10-28 22:27:41,020 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 441 plays to data/raw/playbyplay/0022401104.csv
+2025-10-28 22:27:41,020 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401090
+2025-10-28 22:27:42,058 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 464 plays for game 0022401090
+2025-10-28 22:27:42,065 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 464 plays to data/raw/playbyplay/0022401090.csv
+2025-10-28 22:27:42,066 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401079
+2025-10-28 22:27:43,078 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 491 plays for game 0022401079
+2025-10-28 22:27:43,085 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 491 plays to data/raw/playbyplay/0022401079.csv
+2025-10-28 22:27:43,085 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401061
+2025-10-28 22:27:44,128 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 462 plays for game 0022401061
+2025-10-28 22:27:44,135 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 462 plays to data/raw/playbyplay/0022401061.csv
+2025-10-28 22:27:44,136 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401055
+2025-10-28 22:27:45,043 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 457 plays for game 0022401055
+2025-10-28 22:27:45,048 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 457 plays to data/raw/playbyplay/0022401055.csv
+2025-10-28 22:27:45,048 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401037
+2025-10-28 22:27:45,974 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 468 plays for game 0022401037
+2025-10-28 22:27:45,980 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 468 plays to data/raw/playbyplay/0022401037.csv
+2025-10-28 22:27:45,981 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401024
+2025-10-28 22:27:47,032 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 495 plays for game 0022401024
+2025-10-28 22:27:47,036 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 495 plays to data/raw/playbyplay/0022401024.csv
+2025-10-28 22:27:47,037 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401011
+2025-10-28 22:27:48,583 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 567 plays for game 0022401011
+2025-10-28 22:27:48,591 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 567 plays to data/raw/playbyplay/0022401011.csv
+2025-10-28 22:27:48,591 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400998
+2025-10-28 22:27:49,899 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 501 plays for game 0022400998
+2025-10-28 22:27:49,906 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 501 plays to data/raw/playbyplay/0022400998.csv
+2025-10-28 22:27:49,907 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400986
+2025-10-28 22:27:51,337 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 584 plays for game 0022400986
+2025-10-28 22:27:51,345 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 584 plays to data/raw/playbyplay/0022400986.csv
+2025-10-28 22:27:51,346 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400972
+2025-10-28 22:27:52,278 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 466 plays for game 0022400972
+2025-10-28 22:27:52,285 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 466 plays to data/raw/playbyplay/0022400972.csv
+2025-10-28 22:27:52,286 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400959
+2025-10-28 22:27:54,087 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0022400959
+2025-10-28 22:27:54,094 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/0022400959.csv
+2025-10-28 22:27:54,094 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400942
+2025-10-28 22:27:55,233 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 469 plays for game 0022400942
+2025-10-28 22:27:55,240 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 469 plays to data/raw/playbyplay/0022400942.csv
+2025-10-28 22:27:55,240 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400933
+2025-10-28 22:27:56,580 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 522 plays for game 0022400933
+2025-10-28 22:27:56,588 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 522 plays to data/raw/playbyplay/0022400933.csv
+2025-10-28 22:27:56,588 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400914
+2025-10-28 22:27:57,967 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 554 plays for game 0022400914
+2025-10-28 22:27:57,974 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 554 plays to data/raw/playbyplay/0022400914.csv
+2025-10-28 22:27:57,975 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400899
+2025-10-28 22:27:59,478 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 470 plays for game 0022400899
+2025-10-28 22:27:59,485 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 470 plays to data/raw/playbyplay/0022400899.csv
+2025-10-28 22:27:59,486 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400882
+2025-10-28 22:28:00,382 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 499 plays for game 0022400882
+2025-10-28 22:28:00,389 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 499 plays to data/raw/playbyplay/0022400882.csv
+2025-10-28 22:28:00,390 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400868
+2025-10-28 22:28:02,150 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 464 plays for game 0022400868
+2025-10-28 22:28:02,156 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 464 plays to data/raw/playbyplay/0022400868.csv
+2025-10-28 22:28:02,157 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400854
+2025-10-28 22:28:03,524 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 417 plays for game 0022400854
+2025-10-28 22:28:03,528 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 417 plays to data/raw/playbyplay/0022400854.csv
+2025-10-28 22:28:03,528 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400837
+2025-10-28 22:28:04,766 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 483 plays for game 0022400837
+2025-10-28 22:28:04,769 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 483 plays to data/raw/playbyplay/0022400837.csv
+2025-10-28 22:28:04,770 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400822
+2025-10-28 22:28:05,823 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 482 plays for game 0022400822
+2025-10-28 22:28:05,828 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 482 plays to data/raw/playbyplay/0022400822.csv
+2025-10-28 22:28:05,828 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400813
+2025-10-28 22:28:06,863 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 495 plays for game 0022400813
+2025-10-28 22:28:06,867 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 495 plays to data/raw/playbyplay/0022400813.csv
+2025-10-28 22:28:06,867 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400788
+2025-10-28 22:28:08,443 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 531 plays for game 0022400788
+2025-10-28 22:28:08,450 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 531 plays to data/raw/playbyplay/0022400788.csv
+2025-10-28 22:28:08,451 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400771
+2025-10-28 22:28:10,012 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 535 plays for game 0022400771
+2025-10-28 22:28:10,016 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 535 plays to data/raw/playbyplay/0022400771.csv
+2025-10-28 22:28:10,017 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400765
+2025-10-28 22:28:11,055 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 481 plays for game 0022400765
+2025-10-28 22:28:11,060 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 481 plays to data/raw/playbyplay/0022400765.csv
+2025-10-28 22:28:11,060 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400742
+2025-10-28 22:28:12,103 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 498 plays for game 0022400742
+2025-10-28 22:28:12,108 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 498 plays to data/raw/playbyplay/0022400742.csv
+2025-10-28 22:28:12,109 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400733
+2025-10-28 22:28:13,163 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 484 plays for game 0022400733
+2025-10-28 22:28:13,167 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 484 plays to data/raw/playbyplay/0022400733.csv
+2025-10-28 22:28:13,168 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400716
+2025-10-28 22:28:15,310 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 498 plays for game 0022400716
+2025-10-28 22:28:15,318 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 498 plays to data/raw/playbyplay/0022400716.csv
+2025-10-28 22:28:15,319 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400707
+2025-10-28 22:28:16,829 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 522 plays for game 0022400707
+2025-10-28 22:28:16,835 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 522 plays to data/raw/playbyplay/0022400707.csv
+2025-10-28 22:28:16,836 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400686
+2025-10-28 22:28:18,397 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 517 plays for game 0022400686
+2025-10-28 22:28:18,402 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 517 plays to data/raw/playbyplay/0022400686.csv
+2025-10-28 22:28:18,402 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400664
+2025-10-28 22:28:19,494 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 502 plays for game 0022400664
+2025-10-28 22:28:19,502 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 502 plays to data/raw/playbyplay/0022400664.csv
+2025-10-28 22:28:19,503 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400633
+2025-10-28 22:28:21,009 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 519 plays for game 0022400633
+2025-10-28 22:28:21,014 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 519 plays to data/raw/playbyplay/0022400633.csv
+2025-10-28 22:28:21,014 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400621
+2025-10-28 22:28:22,582 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 473 plays for game 0022400621
+2025-10-28 22:28:22,589 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 473 plays to data/raw/playbyplay/0022400621.csv
+2025-10-28 22:28:22,589 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400588
+2025-10-28 22:28:23,636 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 479 plays for game 0022400588
+2025-10-28 22:28:23,640 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 479 plays to data/raw/playbyplay/0022400588.csv
+2025-10-28 22:28:23,640 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400572
+2025-10-28 22:28:25,213 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 508 plays for game 0022400572
+2025-10-28 22:28:25,220 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 508 plays to data/raw/playbyplay/0022400572.csv
+2025-10-28 22:28:25,221 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400554
+2025-10-28 22:28:26,783 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 517 plays for game 0022400554
+2025-10-28 22:28:26,788 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 517 plays to data/raw/playbyplay/0022400554.csv
+2025-10-28 22:28:26,788 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400543
+2025-10-28 22:28:29,408 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 495 plays for game 0022400543
+2025-10-28 22:28:29,416 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 495 plays to data/raw/playbyplay/0022400543.csv
+2025-10-28 22:28:29,416 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400525
+2025-10-28 22:28:32,367 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 473 plays for game 0022400525
+2025-10-28 22:28:32,375 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 473 plays to data/raw/playbyplay/0022400525.csv
+2025-10-28 22:28:32,375 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400510
+2025-10-28 22:28:33,711 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 518 plays for game 0022400510
+2025-10-28 22:28:33,718 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 518 plays to data/raw/playbyplay/0022400510.csv
+2025-10-28 22:28:33,718 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400495
+2025-10-28 22:28:35,501 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 475 plays for game 0022400495
+2025-10-28 22:28:35,507 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 475 plays to data/raw/playbyplay/0022400495.csv
+2025-10-28 22:28:35,508 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400480
+2025-10-28 22:28:36,554 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 456 plays for game 0022400480
+2025-10-28 22:28:36,560 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 456 plays to data/raw/playbyplay/0022400480.csv
+2025-10-28 22:28:36,561 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400463
+2025-10-28 22:28:37,810 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 443 plays for game 0022400463
+2025-10-28 22:28:37,816 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 443 plays to data/raw/playbyplay/0022400463.csv
+2025-10-28 22:28:37,817 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400450
+2025-10-28 22:28:39,377 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 526 plays for game 0022400450
+2025-10-28 22:28:39,384 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 526 plays to data/raw/playbyplay/0022400450.csv
+2025-10-28 22:28:39,385 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400437
+2025-10-28 22:28:40,751 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 477 plays for game 0022400437
+2025-10-28 22:28:40,758 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 477 plays to data/raw/playbyplay/0022400437.csv
+2025-10-28 22:28:40,758 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400420
+2025-10-28 22:28:41,827 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 490 plays for game 0022400420
+2025-10-28 22:28:41,833 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 490 plays to data/raw/playbyplay/0022400420.csv
+2025-10-28 22:28:41,833 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400410
+2025-10-28 22:28:43,043 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 475 plays for game 0022400410
+2025-10-28 22:28:43,049 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 475 plays to data/raw/playbyplay/0022400410.csv
+2025-10-28 22:28:43,050 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400403
+2025-10-28 22:28:46,190 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 484 plays for game 0022400403
+2025-10-28 22:28:46,197 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 484 plays to data/raw/playbyplay/0022400403.csv
+2025-10-28 22:28:46,197 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400389
+2025-10-28 22:28:47,849 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 457 plays for game 0022400389
+2025-10-28 22:28:47,856 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 457 plays to data/raw/playbyplay/0022400389.csv
+2025-10-28 22:28:47,856 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400369
+2025-10-28 22:28:49,342 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 496 plays for game 0022400369
+2025-10-28 22:28:49,348 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 496 plays to data/raw/playbyplay/0022400369.csv
+2025-10-28 22:28:49,348 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401216
+2025-10-28 22:28:51,434 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 509 plays for game 0022401216
+2025-10-28 22:28:51,440 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 509 plays to data/raw/playbyplay/0022401216.csv
+2025-10-28 22:28:51,440 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401209
+2025-10-28 22:28:53,537 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0022401209
+2025-10-28 22:28:53,544 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/0022401209.csv
+2025-10-28 22:28:53,544 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400349
+2025-10-28 22:28:55,103 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 487 plays for game 0022400349
+2025-10-28 22:28:55,111 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 487 plays to data/raw/playbyplay/0022400349.csv
+2025-10-28 22:28:55,111 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400336
+2025-10-28 22:28:56,153 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 454 plays for game 0022400336
+2025-10-28 22:28:56,161 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 454 plays to data/raw/playbyplay/0022400336.csv
+2025-10-28 22:28:56,161 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400320
+2025-10-28 22:28:57,724 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 483 plays for game 0022400320
+2025-10-28 22:28:57,730 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 483 plays to data/raw/playbyplay/0022400320.csv
+2025-10-28 22:28:57,730 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400054
+2025-10-28 22:28:58,885 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 512 plays for game 0022400054
+2025-10-28 22:28:58,891 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 512 plays to data/raw/playbyplay/0022400054.csv
+2025-10-28 22:28:58,892 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400306
+2025-10-28 22:29:01,398 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 525 plays for game 0022400306
+2025-10-28 22:29:01,407 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 525 plays to data/raw/playbyplay/0022400306.csv
+2025-10-28 22:29:01,407 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400045
+2025-10-28 22:29:02,481 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 464 plays for game 0022400045
+2025-10-28 22:29:02,489 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 464 plays to data/raw/playbyplay/0022400045.csv
+2025-10-28 22:29:02,489 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400288
+2025-10-28 22:29:03,499 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 482 plays for game 0022400288
+2025-10-28 22:29:03,507 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 482 plays to data/raw/playbyplay/0022400288.csv
+2025-10-28 22:29:03,508 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400279
+2025-10-28 22:29:04,540 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0022400279
+2025-10-28 22:29:04,546 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/0022400279.csv
+2025-10-28 22:29:04,547 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400272
+2025-10-28 22:29:05,536 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 483 plays for game 0022400272
+2025-10-28 22:29:05,544 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 483 plays to data/raw/playbyplay/0022400272.csv
+2025-10-28 22:29:05,545 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400029
+2025-10-28 22:29:06,496 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 502 plays for game 0022400029
+2025-10-28 22:29:06,500 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 502 plays to data/raw/playbyplay/0022400029.csv
+2025-10-28 22:29:06,501 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400254
+2025-10-28 22:29:07,700 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 535 plays for game 0022400254
+2025-10-28 22:29:07,707 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 535 plays to data/raw/playbyplay/0022400254.csv
+2025-10-28 22:29:07,708 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400247
+2025-10-28 22:29:08,763 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 522 plays for game 0022400247
+2025-10-28 22:29:08,770 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 522 plays to data/raw/playbyplay/0022400247.csv
+2025-10-28 22:29:08,771 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400235
+2025-10-28 22:29:09,653 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 452 plays for game 0022400235
+2025-10-28 22:29:09,656 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 452 plays to data/raw/playbyplay/0022400235.csv
+2025-10-28 22:29:09,656 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400009
+2025-10-28 22:29:10,419 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 453 plays for game 0022400009
+2025-10-28 22:29:10,427 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 453 plays to data/raw/playbyplay/0022400009.csv
+2025-10-28 22:29:10,427 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400217
+2025-10-28 22:29:11,873 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 486 plays for game 0022400217
+2025-10-28 22:29:11,879 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 486 plays to data/raw/playbyplay/0022400217.csv
+2025-10-28 22:29:11,880 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400203
+2025-10-28 22:29:12,762 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 476 plays for game 0022400203
+2025-10-28 22:29:12,769 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 476 plays to data/raw/playbyplay/0022400203.csv
+2025-10-28 22:29:12,769 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400184
+2025-10-28 22:29:13,782 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 475 plays for game 0022400184
+2025-10-28 22:29:13,789 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 475 plays to data/raw/playbyplay/0022400184.csv
+2025-10-28 22:29:13,789 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400170
+2025-10-28 22:29:14,829 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 467 plays for game 0022400170
+2025-10-28 22:29:14,833 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 467 plays to data/raw/playbyplay/0022400170.csv
+2025-10-28 22:29:14,833 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400165
+2025-10-28 22:29:16,112 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 469 plays for game 0022400165
+2025-10-28 22:29:16,120 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 469 plays to data/raw/playbyplay/0022400165.csv
+2025-10-28 22:29:16,120 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400138
+2025-10-28 22:29:17,019 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 473 plays for game 0022400138
+2025-10-28 22:29:17,023 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 473 plays to data/raw/playbyplay/0022400138.csv
+2025-10-28 22:29:17,023 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400119
+2025-10-28 22:29:17,976 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 597 plays for game 0022400119
+2025-10-28 22:29:17,980 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 597 plays to data/raw/playbyplay/0022400119.csv
+2025-10-28 22:29:17,981 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400102
+2025-10-28 22:29:19,027 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 532 plays for game 0022400102
+2025-10-28 22:29:19,031 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 532 plays to data/raw/playbyplay/0022400102.csv
+2025-10-28 22:29:19,031 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400097
+2025-10-28 22:29:20,594 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 584 plays for game 0022400097
+2025-10-28 22:29:20,598 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 584 plays to data/raw/playbyplay/0022400097.csv
+2025-10-28 22:29:20,598 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400081
+2025-10-28 22:29:21,652 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 475 plays for game 0022400081
+2025-10-28 22:29:21,659 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 475 plays to data/raw/playbyplay/0022400081.csv
+2025-10-28 22:29:21,659 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400063
+2025-10-28 22:29:22,588 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 510 plays for game 0022400063
+2025-10-28 22:29:22,593 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 510 plays to data/raw/playbyplay/0022400063.csv
+2025-10-28 22:29:22,594 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0012400061
+2025-10-28 22:29:23,621 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 578 plays for game 0012400061
+2025-10-28 22:29:23,626 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 578 plays to data/raw/playbyplay/0012400061.csv
+2025-10-28 22:29:23,627 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0012400045
+2025-10-28 22:29:24,534 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 508 plays for game 0012400045
+2025-10-28 22:29:24,538 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 508 plays to data/raw/playbyplay/0012400045.csv
+2025-10-28 22:29:24,539 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0012400024
+2025-10-28 22:29:27,416 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 476 plays for game 0012400024
+2025-10-28 22:29:27,423 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 476 plays to data/raw/playbyplay/0012400024.csv
+2025-10-28 22:29:27,423 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0012400018
+2025-10-28 22:29:28,665 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 526 plays for game 0012400018
+2025-10-28 22:29:28,673 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 526 plays to data/raw/playbyplay/0012400018.csv
+2025-10-28 22:29:28,675 - __main__ - INFO - Completed fetching play-by-play data for Indiana Pacers 2024-25
+2025-10-28 22:29:28,675 - __main__ - INFO - Results: {'total_games': 109, 'successful_games': 109, 'failed_games': 0, 'success_rate': 1.0, 'total_plays': 54559, 'avg_plays_per_game': 500.54128440366975, 'failed_game_ids': []}

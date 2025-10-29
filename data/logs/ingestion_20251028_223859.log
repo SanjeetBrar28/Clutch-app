@@ -1,0 +1,333 @@
+2025-10-28 22:38:59,566 - backend.services.data_ingestion.game_utils - INFO - Fetching game IDs for Indiana Pacers (ID: 1610612754) for season 2024-25
+2025-10-28 22:39:00,749 - backend.services.data_ingestion.game_utils - INFO - Successfully fetched 109 games for Indiana Pacers
+2025-10-28 22:39:00,749 - backend.services.data_ingestion.game_utils - INFO - Fetching game IDs for Indiana Pacers (ID: 1610612754) for season 2024-25
+2025-10-28 22:39:01,710 - backend.services.data_ingestion.game_utils - INFO - Successfully fetched 109 games for Indiana Pacers
+2025-10-28 22:39:01,734 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400407
+2025-10-28 22:39:03,274 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 542 plays for game 0042400407
+2025-10-28 22:39:03,279 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 542 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400407.csv
+2025-10-28 22:39:03,279 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400406
+2025-10-28 22:39:04,313 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 521 plays for game 0042400406
+2025-10-28 22:39:04,318 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 521 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400406.csv
+2025-10-28 22:39:04,318 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400405
+2025-10-28 22:39:05,365 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 581 plays for game 0042400405
+2025-10-28 22:39:05,369 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 581 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400405.csv
+2025-10-28 22:39:05,370 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400404
+2025-10-28 22:39:06,064 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 539 plays for game 0042400404
+2025-10-28 22:39:06,069 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 539 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400404.csv
+2025-10-28 22:39:06,069 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400403
+2025-10-28 22:39:06,984 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 521 plays for game 0042400403
+2025-10-28 22:39:06,990 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 521 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400403.csv
+2025-10-28 22:39:06,990 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400402
+2025-10-28 22:39:08,019 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 516 plays for game 0042400402
+2025-10-28 22:39:08,025 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 516 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400402.csv
+2025-10-28 22:39:08,026 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400401
+2025-10-28 22:39:09,069 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 524 plays for game 0042400401
+2025-10-28 22:39:09,074 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 524 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400401.csv
+2025-10-28 22:39:09,075 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400306
+2025-10-28 22:39:10,103 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 505 plays for game 0042400306
+2025-10-28 22:39:10,107 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 505 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400306.csv
+2025-10-28 22:39:10,107 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400305
+2025-10-28 22:39:11,185 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 504 plays for game 0042400305
+2025-10-28 22:39:11,189 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 504 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400305.csv
+2025-10-28 22:39:11,189 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400304
+2025-10-28 22:39:12,217 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 525 plays for game 0042400304
+2025-10-28 22:39:12,223 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 525 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400304.csv
+2025-10-28 22:39:12,224 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400303
+2025-10-28 22:39:13,278 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 501 plays for game 0042400303
+2025-10-28 22:39:13,283 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 501 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400303.csv
+2025-10-28 22:39:13,283 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400302
+2025-10-28 22:39:14,295 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 461 plays for game 0042400302
+2025-10-28 22:39:14,299 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 461 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400302.csv
+2025-10-28 22:39:14,299 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400301
+2025-10-28 22:39:15,348 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 585 plays for game 0042400301
+2025-10-28 22:39:15,353 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 585 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400301.csv
+2025-10-28 22:39:15,353 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400205
+2025-10-28 22:39:16,399 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 535 plays for game 0042400205
+2025-10-28 22:39:16,407 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 535 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400205.csv
+2025-10-28 22:39:16,407 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400204
+2025-10-28 22:39:17,453 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 499 plays for game 0042400204
+2025-10-28 22:39:17,459 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 499 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400204.csv
+2025-10-28 22:39:17,460 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400203
+2025-10-28 22:39:18,492 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 576 plays for game 0042400203
+2025-10-28 22:39:18,499 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 576 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400203.csv
+2025-10-28 22:39:18,500 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400202
+2025-10-28 22:39:19,541 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 555 plays for game 0042400202
+2025-10-28 22:39:19,546 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 555 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400202.csv
+2025-10-28 22:39:19,547 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400201
+2025-10-28 22:39:20,598 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 480 plays for game 0042400201
+2025-10-28 22:39:20,602 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 480 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400201.csv
+2025-10-28 22:39:20,603 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400135
+2025-10-28 22:39:21,646 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 529 plays for game 0042400135
+2025-10-28 22:39:21,653 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 529 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400135.csv
+2025-10-28 22:39:21,654 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400134
+2025-10-28 22:39:22,499 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 446 plays for game 0042400134
+2025-10-28 22:39:22,505 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 446 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400134.csv
+2025-10-28 22:39:22,505 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400133
+2025-10-28 22:39:23,153 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 484 plays for game 0042400133
+2025-10-28 22:39:23,158 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 484 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400133.csv
+2025-10-28 22:39:23,158 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400132
+2025-10-28 22:39:23,815 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 462 plays for game 0042400132
+2025-10-28 22:39:23,820 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 462 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400132.csv
+2025-10-28 22:39:23,821 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0042400131
+2025-10-28 22:39:24,784 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0042400131
+2025-10-28 22:39:24,788 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/indiana_pacers/2024_25/0042400131.csv
+2025-10-28 22:39:24,788 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401189
+2025-10-28 22:39:25,843 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 634 plays for game 0022401189
+2025-10-28 22:39:25,850 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 634 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401189.csv
+2025-10-28 22:39:25,851 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401172
+2025-10-28 22:39:26,892 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 524 plays for game 0022401172
+2025-10-28 22:39:26,899 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 524 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401172.csv
+2025-10-28 22:39:26,899 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401168
+2025-10-28 22:39:27,750 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0022401168
+2025-10-28 22:39:27,756 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401168.csv
+2025-10-28 22:39:27,757 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401148
+2025-10-28 22:39:28,406 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 495 plays for game 0022401148
+2025-10-28 22:39:28,411 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 495 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401148.csv
+2025-10-28 22:39:28,411 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401142
+2025-10-28 22:39:29,096 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 482 plays for game 0022401142
+2025-10-28 22:39:29,101 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 482 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401142.csv
+2025-10-28 22:39:29,101 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401119
+2025-10-28 22:39:29,902 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 533 plays for game 0022401119
+2025-10-28 22:39:29,906 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 533 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401119.csv
+2025-10-28 22:39:29,907 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401104
+2025-10-28 22:39:30,547 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 441 plays for game 0022401104
+2025-10-28 22:39:30,551 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 441 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401104.csv
+2025-10-28 22:39:30,551 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401090
+2025-10-28 22:39:31,222 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 464 plays for game 0022401090
+2025-10-28 22:39:31,228 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 464 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401090.csv
+2025-10-28 22:39:31,229 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401079
+2025-10-28 22:39:32,136 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 491 plays for game 0022401079
+2025-10-28 22:39:32,143 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 491 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401079.csv
+2025-10-28 22:39:32,144 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401061
+2025-10-28 22:39:33,185 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 462 plays for game 0022401061
+2025-10-28 22:39:33,192 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 462 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401061.csv
+2025-10-28 22:39:33,193 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401055
+2025-10-28 22:39:34,229 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 457 plays for game 0022401055
+2025-10-28 22:39:34,232 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 457 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401055.csv
+2025-10-28 22:39:34,232 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401037
+2025-10-28 22:39:35,306 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 468 plays for game 0022401037
+2025-10-28 22:39:35,313 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 468 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401037.csv
+2025-10-28 22:39:35,313 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401024
+2025-10-28 22:39:36,333 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 495 plays for game 0022401024
+2025-10-28 22:39:36,339 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 495 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401024.csv
+2025-10-28 22:39:36,339 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401011
+2025-10-28 22:39:37,377 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 567 plays for game 0022401011
+2025-10-28 22:39:37,383 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 567 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401011.csv
+2025-10-28 22:39:37,383 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400998
+2025-10-28 22:39:38,418 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 501 plays for game 0022400998
+2025-10-28 22:39:38,422 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 501 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400998.csv
+2025-10-28 22:39:38,423 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400986
+2025-10-28 22:39:39,277 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 584 plays for game 0022400986
+2025-10-28 22:39:39,282 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 584 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400986.csv
+2025-10-28 22:39:39,282 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400972
+2025-10-28 22:39:39,947 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 466 plays for game 0022400972
+2025-10-28 22:39:39,951 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 466 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400972.csv
+2025-10-28 22:39:39,951 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400959
+2025-10-28 22:39:40,587 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0022400959
+2025-10-28 22:39:40,591 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400959.csv
+2025-10-28 22:39:40,591 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400942
+2025-10-28 22:39:41,567 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 469 plays for game 0022400942
+2025-10-28 22:39:41,571 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 469 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400942.csv
+2025-10-28 22:39:41,571 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400933
+2025-10-28 22:39:42,636 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 522 plays for game 0022400933
+2025-10-28 22:39:42,640 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 522 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400933.csv
+2025-10-28 22:39:42,640 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400914
+2025-10-28 22:39:43,676 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 554 plays for game 0022400914
+2025-10-28 22:39:43,680 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 554 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400914.csv
+2025-10-28 22:39:43,680 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400899
+2025-10-28 22:39:44,717 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 470 plays for game 0022400899
+2025-10-28 22:39:44,722 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 470 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400899.csv
+2025-10-28 22:39:44,722 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400882
+2025-10-28 22:39:45,767 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 499 plays for game 0022400882
+2025-10-28 22:39:45,771 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 499 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400882.csv
+2025-10-28 22:39:45,772 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400868
+2025-10-28 22:39:46,638 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 464 plays for game 0022400868
+2025-10-28 22:39:46,646 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 464 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400868.csv
+2025-10-28 22:39:46,647 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400854
+2025-10-28 22:39:47,315 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 417 plays for game 0022400854
+2025-10-28 22:39:47,318 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 417 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400854.csv
+2025-10-28 22:39:47,318 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400837
+2025-10-28 22:39:48,000 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 483 plays for game 0022400837
+2025-10-28 22:39:48,035 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 483 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400837.csv
+2025-10-28 22:39:48,037 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400822
+2025-10-28 22:39:48,924 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 482 plays for game 0022400822
+2025-10-28 22:39:48,930 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 482 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400822.csv
+2025-10-28 22:39:48,931 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400813
+2025-10-28 22:39:49,969 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 495 plays for game 0022400813
+2025-10-28 22:39:49,976 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 495 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400813.csv
+2025-10-28 22:39:49,976 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400788
+2025-10-28 22:39:51,019 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 531 plays for game 0022400788
+2025-10-28 22:39:51,027 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 531 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400788.csv
+2025-10-28 22:39:51,028 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400771
+2025-10-28 22:39:52,064 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 535 plays for game 0022400771
+2025-10-28 22:39:52,068 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 535 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400771.csv
+2025-10-28 22:39:52,068 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400765
+2025-10-28 22:39:53,110 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 481 plays for game 0022400765
+2025-10-28 22:39:53,115 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 481 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400765.csv
+2025-10-28 22:39:53,116 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400742
+2025-10-28 22:39:54,173 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 498 plays for game 0022400742
+2025-10-28 22:39:54,179 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 498 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400742.csv
+2025-10-28 22:39:54,179 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400733
+2025-10-28 22:39:55,213 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 484 plays for game 0022400733
+2025-10-28 22:39:55,219 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 484 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400733.csv
+2025-10-28 22:39:55,219 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400716
+2025-10-28 22:39:56,253 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 498 plays for game 0022400716
+2025-10-28 22:39:56,257 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 498 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400716.csv
+2025-10-28 22:39:56,257 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400707
+2025-10-28 22:39:57,318 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 522 plays for game 0022400707
+2025-10-28 22:39:57,325 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 522 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400707.csv
+2025-10-28 22:39:57,325 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400686
+2025-10-28 22:39:58,363 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 517 plays for game 0022400686
+2025-10-28 22:39:58,370 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 517 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400686.csv
+2025-10-28 22:39:58,371 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400664
+2025-10-28 22:39:59,406 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 502 plays for game 0022400664
+2025-10-28 22:39:59,412 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 502 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400664.csv
+2025-10-28 22:39:59,412 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400633
+2025-10-28 22:40:00,462 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 519 plays for game 0022400633
+2025-10-28 22:40:00,467 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 519 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400633.csv
+2025-10-28 22:40:00,468 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400621
+2025-10-28 22:40:01,545 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 473 plays for game 0022400621
+2025-10-28 22:40:01,555 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 473 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400621.csv
+2025-10-28 22:40:01,555 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400588
+2025-10-28 22:40:02,556 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 479 plays for game 0022400588
+2025-10-28 22:40:02,564 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 479 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400588.csv
+2025-10-28 22:40:02,564 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400572
+2025-10-28 22:40:03,595 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 508 plays for game 0022400572
+2025-10-28 22:40:03,600 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 508 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400572.csv
+2025-10-28 22:40:03,601 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400554
+2025-10-28 22:40:04,651 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 517 plays for game 0022400554
+2025-10-28 22:40:04,659 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 517 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400554.csv
+2025-10-28 22:40:04,660 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400543
+2025-10-28 22:40:05,695 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 495 plays for game 0022400543
+2025-10-28 22:40:05,701 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 495 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400543.csv
+2025-10-28 22:40:05,702 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400525
+2025-10-28 22:40:06,752 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 473 plays for game 0022400525
+2025-10-28 22:40:06,756 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 473 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400525.csv
+2025-10-28 22:40:06,756 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400510
+2025-10-28 22:40:07,803 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 518 plays for game 0022400510
+2025-10-28 22:40:07,809 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 518 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400510.csv
+2025-10-28 22:40:07,810 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400495
+2025-10-28 22:40:08,844 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 475 plays for game 0022400495
+2025-10-28 22:40:08,852 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 475 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400495.csv
+2025-10-28 22:40:08,852 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400480
+2025-10-28 22:40:09,895 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 456 plays for game 0022400480
+2025-10-28 22:40:09,902 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 456 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400480.csv
+2025-10-28 22:40:09,903 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400463
+2025-10-28 22:40:10,941 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 443 plays for game 0022400463
+2025-10-28 22:40:10,946 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 443 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400463.csv
+2025-10-28 22:40:10,947 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400450
+2025-10-28 22:40:11,985 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 526 plays for game 0022400450
+2025-10-28 22:40:11,989 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 526 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400450.csv
+2025-10-28 22:40:11,989 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400437
+2025-10-28 22:40:13,045 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 477 plays for game 0022400437
+2025-10-28 22:40:13,054 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 477 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400437.csv
+2025-10-28 22:40:13,055 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400420
+2025-10-28 22:40:14,103 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 490 plays for game 0022400420
+2025-10-28 22:40:14,109 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 490 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400420.csv
+2025-10-28 22:40:14,110 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400410
+2025-10-28 22:40:14,945 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 475 plays for game 0022400410
+2025-10-28 22:40:14,954 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 475 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400410.csv
+2025-10-28 22:40:14,955 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400403
+2025-10-28 22:40:15,604 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 484 plays for game 0022400403
+2025-10-28 22:40:15,612 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 484 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400403.csv
+2025-10-28 22:40:15,612 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400389
+2025-10-28 22:40:16,262 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 457 plays for game 0022400389
+2025-10-28 22:40:16,269 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 457 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400389.csv
+2025-10-28 22:40:16,269 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400369
+2025-10-28 22:40:17,078 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 496 plays for game 0022400369
+2025-10-28 22:40:17,084 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 496 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400369.csv
+2025-10-28 22:40:17,084 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401216
+2025-10-28 22:40:17,738 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 509 plays for game 0022401216
+2025-10-28 22:40:17,744 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 509 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401216.csv
+2025-10-28 22:40:17,744 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022401209
+2025-10-28 22:40:18,399 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0022401209
+2025-10-28 22:40:18,410 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022401209.csv
+2025-10-28 22:40:18,410 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400349
+2025-10-28 22:40:19,331 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 487 plays for game 0022400349
+2025-10-28 22:40:19,336 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 487 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400349.csv
+2025-10-28 22:40:19,337 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400336
+2025-10-28 22:40:20,382 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 454 plays for game 0022400336
+2025-10-28 22:40:20,388 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 454 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400336.csv
+2025-10-28 22:40:20,388 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400320
+2025-10-28 22:40:21,434 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 483 plays for game 0022400320
+2025-10-28 22:40:21,441 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 483 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400320.csv
+2025-10-28 22:40:21,442 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400054
+2025-10-28 22:40:22,494 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 512 plays for game 0022400054
+2025-10-28 22:40:22,503 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 512 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400054.csv
+2025-10-28 22:40:22,503 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400306
+2025-10-28 22:40:23,536 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 525 plays for game 0022400306
+2025-10-28 22:40:23,546 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 525 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400306.csv
+2025-10-28 22:40:23,546 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400045
+2025-10-28 22:40:24,579 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 464 plays for game 0022400045
+2025-10-28 22:40:24,585 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 464 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400045.csv
+2025-10-28 22:40:24,586 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400288
+2025-10-28 22:40:25,632 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 482 plays for game 0022400288
+2025-10-28 22:40:25,638 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 482 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400288.csv
+2025-10-28 22:40:25,639 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400279
+2025-10-28 22:40:26,486 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 485 plays for game 0022400279
+2025-10-28 22:40:26,493 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 485 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400279.csv
+2025-10-28 22:40:26,493 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400272
+2025-10-28 22:40:27,164 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 483 plays for game 0022400272
+2025-10-28 22:40:27,171 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 483 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400272.csv
+2025-10-28 22:40:27,171 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400029
+2025-10-28 22:40:27,848 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 502 plays for game 0022400029
+2025-10-28 22:40:27,855 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 502 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400029.csv
+2025-10-28 22:40:27,856 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400254
+2025-10-28 22:40:28,581 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 535 plays for game 0022400254
+2025-10-28 22:40:28,589 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 535 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400254.csv
+2025-10-28 22:40:28,590 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400247
+2025-10-28 22:40:29,245 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 522 plays for game 0022400247
+2025-10-28 22:40:29,252 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 522 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400247.csv
+2025-10-28 22:40:29,253 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400235
+2025-10-28 22:40:29,942 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 452 plays for game 0022400235
+2025-10-28 22:40:29,950 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 452 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400235.csv
+2025-10-28 22:40:29,951 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400009
+2025-10-28 22:40:30,672 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 453 plays for game 0022400009
+2025-10-28 22:40:30,679 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 453 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400009.csv
+2025-10-28 22:40:30,680 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400217
+2025-10-28 22:40:31,359 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 486 plays for game 0022400217
+2025-10-28 22:40:31,367 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 486 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400217.csv
+2025-10-28 22:40:31,368 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400203
+2025-10-28 22:40:32,014 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 476 plays for game 0022400203
+2025-10-28 22:40:32,020 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 476 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400203.csv
+2025-10-28 22:40:32,021 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400184
+2025-10-28 22:40:32,971 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 475 plays for game 0022400184
+2025-10-28 22:40:32,979 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 475 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400184.csv
+2025-10-28 22:40:32,980 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400170
+2025-10-28 22:40:34,014 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 467 plays for game 0022400170
+2025-10-28 22:40:34,022 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 467 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400170.csv
+2025-10-28 22:40:34,022 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400165
+2025-10-28 22:40:35,061 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 469 plays for game 0022400165
+2025-10-28 22:40:35,067 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 469 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400165.csv
+2025-10-28 22:40:35,067 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400138
+2025-10-28 22:40:36,108 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 473 plays for game 0022400138
+2025-10-28 22:40:36,128 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 473 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400138.csv
+2025-10-28 22:40:36,128 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400119
+2025-10-28 22:40:37,160 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 597 plays for game 0022400119
+2025-10-28 22:40:37,167 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 597 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400119.csv
+2025-10-28 22:40:37,168 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400102
+2025-10-28 22:40:38,007 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 532 plays for game 0022400102
+2025-10-28 22:40:38,013 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 532 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400102.csv
+2025-10-28 22:40:38,014 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400097
+2025-10-28 22:40:38,669 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 584 plays for game 0022400097
+2025-10-28 22:40:38,675 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 584 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400097.csv
+2025-10-28 22:40:38,675 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400081
+2025-10-28 22:40:39,339 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 475 plays for game 0022400081
+2025-10-28 22:40:39,344 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 475 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400081.csv
+2025-10-28 22:40:39,344 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0022400063
+2025-10-28 22:40:40,110 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 510 plays for game 0022400063
+2025-10-28 22:40:40,118 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 510 plays to data/raw/playbyplay/indiana_pacers/2024_25/0022400063.csv
+2025-10-28 22:40:40,118 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0012400061
+2025-10-28 22:40:40,871 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 578 plays for game 0012400061
+2025-10-28 22:40:40,875 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 578 plays to data/raw/playbyplay/indiana_pacers/2024_25/0012400061.csv
+2025-10-28 22:40:40,875 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0012400045
+2025-10-28 22:40:41,661 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 508 plays for game 0012400045
+2025-10-28 22:40:41,669 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 508 plays to data/raw/playbyplay/indiana_pacers/2024_25/0012400045.csv
+2025-10-28 22:40:41,669 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0012400024
+2025-10-28 22:40:42,338 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 476 plays for game 0012400024
+2025-10-28 22:40:42,344 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 476 plays to data/raw/playbyplay/indiana_pacers/2024_25/0012400024.csv
+2025-10-28 22:40:42,345 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Fetching play-by-play data for game 0012400018
+2025-10-28 22:40:42,985 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Successfully fetched 526 plays for game 0012400018
+2025-10-28 22:40:42,990 - backend.services.data_ingestion.fetch_playbyplay_v3 - INFO - Saved 526 plays to data/raw/playbyplay/indiana_pacers/2024_25/0012400018.csv
+2025-10-28 22:40:42,991 - __main__ - INFO - Completed fetching play-by-play data for Indiana Pacers 2024-25
+2025-10-28 22:40:42,991 - __main__ - INFO - Results: {'total_games': 109, 'successful_games': 109, 'failed_games': 0, 'success_rate': 1.0, 'total_plays': 54559, 'avg_plays_per_game': 500.54128440366975, 'failed_game_ids': []}

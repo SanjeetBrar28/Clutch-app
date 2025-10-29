@@ -1,0 +1,9 @@
+2025-10-28 15:53:54,273 - INFO - Fetching game log for LeBron James (ID: 2544) for season 2023-24
+2025-10-28 15:53:55,653 - INFO - Successfully fetched 71 games for LeBron James
+2025-10-28 15:53:55,656 - INFO - Saved 71 rows to data/raw/player_lebron_james_2023_24.csv
+2025-10-28 15:54:16,280 - INFO - Fetching game log for Stephen Curry (ID: 201939) for season 2023-24
+2025-10-28 15:54:17,213 - INFO - Successfully fetched 74 games for Stephen Curry
+2025-10-28 15:54:17,218 - INFO - Saved 74 rows to data/raw/player_stephen_curry_2023_24.csv
+2025-10-28 15:55:14,403 - INFO - Fetching game log for LeBron James (ID: 2544) for season 2023-24
+2025-10-28 15:55:15,391 - INFO - Successfully fetched 71 games for LeBron James
+2025-10-28 15:55:15,398 - INFO - Saved 71 rows to data/raw/player_lebron_james_2023_24.csv

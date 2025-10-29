@@ -1,0 +1,2 @@
+2025-10-28 18:58:09,897 - backend.services.data_ingestion.game_utils - INFO - Fetching game IDs for Indiana Pacers (ID: 1610612754) for season 2022
+2025-10-28 18:58:12,831 - backend.services.data_ingestion.game_utils - WARNING - No games found for Indiana Pacers in season 2022

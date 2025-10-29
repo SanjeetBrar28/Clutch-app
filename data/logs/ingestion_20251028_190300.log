@@ -1,0 +1,2 @@
+2025-10-28 19:03:00,968 - backend.services.data_ingestion.game_utils - INFO - Fetching game IDs for Indiana Pacers (ID: 1610612754) for season 2012
+2025-10-28 19:03:04,968 - backend.services.data_ingestion.game_utils - WARNING - No games found for Indiana Pacers in season 2012
