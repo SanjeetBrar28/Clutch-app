@@ -1,0 +1,225 @@
+2025-10-29 13:09:33,357 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loading play-by-play data for 109 games from data/raw/playbyplay/indiana_pacers/2024_25
+2025-10-29 13:09:33,366 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 457 plays from 0022400389.csv
+2025-10-29 13:09:33,368 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 475 plays from 0022400410.csv
+2025-10-29 13:09:33,371 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 476 plays from 0022400203.csv
+2025-10-29 13:09:33,373 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 486 plays from 0022400217.csv
+2025-10-29 13:09:33,377 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 502 plays from 0022400029.csv
+2025-10-29 13:09:33,381 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 457 plays from 0022401055.csv
+2025-10-29 13:09:33,383 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 487 plays from 0022400349.csv
+2025-10-29 13:09:33,386 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 482 plays from 0022400822.csv
+2025-10-29 13:09:33,388 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 469 plays from 0022400942.csv
+2025-10-29 13:09:33,391 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 481 plays from 0022400765.csv
+2025-10-29 13:09:33,393 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 535 plays from 0022400771.csv
+2025-10-29 13:09:33,396 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 508 plays from 0022400572.csv
+2025-10-29 13:09:33,398 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 476 plays from 0012400024.csv
+2025-10-29 13:09:33,401 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 526 plays from 0012400018.csv
+2025-10-29 13:09:33,404 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 483 plays from 0022400837.csv
+2025-10-29 13:09:33,407 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 479 plays from 0022400588.csv
+2025-10-29 13:09:33,410 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 484 plays from 0022400403.csv
+2025-10-29 13:09:33,413 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 464 plays from 0022401090.csv
+2025-10-29 13:09:33,415 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 491 plays from 0022401079.csv
+2025-10-29 13:09:33,417 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 469 plays from 0022400165.csv
+2025-10-29 13:09:33,419 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 531 plays from 0022400788.csv
+2025-10-29 13:09:33,422 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 533 plays from 0022401119.csv
+2025-10-29 13:09:33,425 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 584 plays from 0022400986.csv
+2025-10-29 13:09:33,428 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 467 plays from 0022400170.csv
+2025-10-29 13:09:33,430 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 468 plays from 0022401037.csv
+2025-10-29 13:09:33,432 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 485 plays from 0022401209.csv
+2025-10-29 13:09:33,435 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 510 plays from 0022400063.csv
+2025-10-29 13:09:33,437 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 446 plays from 0042400134.csv
+2025-10-29 13:09:33,440 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 508 plays from 0012400045.csv
+2025-10-29 13:09:33,443 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 482 plays from 0022401142.csv
+2025-10-29 13:09:33,449 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 529 plays from 0042400135.csv
+2025-10-29 13:09:33,453 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 532 plays from 0022400102.csv
+2025-10-29 13:09:33,457 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 502 plays from 0022400664.csv
+2025-10-29 13:09:33,463 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 499 plays from 0022400882.csv
+2025-10-29 13:09:33,469 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 485 plays from 0022401168.csv
+2025-10-29 13:09:33,477 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 518 plays from 0022400510.csv
+2025-10-29 13:09:33,480 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 482 plays from 0022400288.csv
+2025-10-29 13:09:33,483 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 522 plays from 0022400707.csv
+2025-10-29 13:09:33,485 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 417 plays from 0022400854.csv
+2025-10-29 13:09:33,487 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 464 plays from 0022400868.csv
+2025-10-29 13:09:33,491 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 462 plays from 0042400132.csv
+2025-10-29 13:09:33,493 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 483 plays from 0022400272.csv
+2025-10-29 13:09:33,496 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 498 plays from 0022400716.csv
+2025-10-29 13:09:33,498 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 484 plays from 0042400133.csv
+2025-10-29 13:09:33,501 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 473 plays from 0022400138.csv
+2025-10-29 13:09:33,504 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 525 plays from 0022400306.csv
+2025-10-29 13:09:33,507 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 495 plays from 0022401024.csv
+2025-10-29 13:09:33,510 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 522 plays from 0022400933.csv
+2025-10-29 13:09:33,513 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 485 plays from 0042400131.csv
+2025-10-29 13:09:33,515 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 443 plays from 0022400463.csv
+2025-10-29 13:09:33,517 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 483 plays from 0022400320.csv
+2025-10-29 13:09:33,520 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 475 plays from 0022400081.csv
+2025-10-29 13:09:33,524 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 634 plays from 0022401189.csv
+2025-10-29 13:09:33,526 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 535 plays from 0022400254.csv
+2025-10-29 13:09:33,529 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 501 plays from 0042400303.csv
+2025-10-29 13:09:33,531 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 461 plays from 0042400302.csv
+2025-10-29 13:09:33,534 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 517 plays from 0022400686.csv
+2025-10-29 13:09:33,536 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 554 plays from 0022400914.csv
+2025-10-29 13:09:33,539 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 484 plays from 0022400733.csv
+2025-10-29 13:09:33,542 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 473 plays from 0022400525.csv
+2025-10-29 13:09:33,545 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 585 plays from 0042400301.csv
+2025-10-29 13:09:33,548 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 495 plays from 0022401148.csv
+2025-10-29 13:09:33,550 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 512 plays from 0022400054.csv
+2025-10-29 13:09:33,553 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 584 plays from 0022400097.csv
+2025-10-29 13:09:33,557 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 509 plays from 0022401216.csv
+2025-10-29 13:09:33,560 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 526 plays from 0022400450.csv
+2025-10-29 13:09:33,563 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 454 plays from 0022400336.csv
+2025-10-29 13:09:33,566 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 504 plays from 0042400305.csv
+2025-10-29 13:09:33,568 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 522 plays from 0022400247.csv
+2025-10-29 13:09:33,570 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 525 plays from 0042400304.csv
+2025-10-29 13:09:33,574 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 464 plays from 0022400045.csv
+2025-10-29 13:09:33,578 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 597 plays from 0022400119.csv
+2025-10-29 13:09:33,580 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 567 plays from 0022401011.csv
+2025-10-29 13:09:33,583 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 456 plays from 0022400480.csv
+2025-10-29 13:09:33,585 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 470 plays from 0022400899.csv
+2025-10-29 13:09:33,587 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 578 plays from 0012400061.csv
+2025-10-29 13:09:33,591 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 505 plays from 0042400306.csv
+2025-10-29 13:09:33,594 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 485 plays from 0022400279.csv
+2025-10-29 13:09:33,596 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 524 plays from 0022401172.csv
+2025-10-29 13:09:33,598 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 475 plays from 0022400495.csv
+2025-10-29 13:09:33,601 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 462 plays from 0022401061.csv
+2025-10-29 13:09:33,604 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 519 plays from 0022400633.csv
+2025-10-29 13:09:33,608 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 453 plays from 0022400009.csv
+2025-10-29 13:09:33,612 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 521 plays from 0042400406.csv
+2025-10-29 13:09:33,615 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 542 plays from 0042400407.csv
+2025-10-29 13:09:33,620 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 480 plays from 0042400201.csv
+2025-10-29 13:09:33,627 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 576 plays from 0042400203.csv
+2025-10-29 13:09:33,634 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 581 plays from 0042400405.csv
+2025-10-29 13:09:33,641 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 539 plays from 0042400404.csv
+2025-10-29 13:09:33,644 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 452 plays from 0022400235.csv
+2025-10-29 13:09:33,646 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 555 plays from 0042400202.csv
+2025-10-29 13:09:33,649 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 496 plays from 0022400369.csv
+2025-10-29 13:09:33,651 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 477 plays from 0022400437.csv
+2025-10-29 13:09:33,653 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 475 plays from 0022400184.csv
+2025-10-29 13:09:33,655 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 473 plays from 0022400621.csv
+2025-10-29 13:09:33,658 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 466 plays from 0022400972.csv
+2025-10-29 13:09:33,660 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 495 plays from 0022400543.csv
+2025-10-29 13:09:33,662 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 524 plays from 0042400401.csv
+2025-10-29 13:09:33,664 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 501 plays from 0022400998.csv
+2025-10-29 13:09:33,667 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 495 plays from 0022400813.csv
+2025-10-29 13:09:33,669 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 535 plays from 0042400205.csv
+2025-10-29 13:09:33,671 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 490 plays from 0022400420.csv
+2025-10-29 13:09:33,674 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 485 plays from 0022400959.csv
+2025-10-29 13:09:33,676 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 498 plays from 0022400742.csv
+2025-10-29 13:09:33,678 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 521 plays from 0042400403.csv
+2025-10-29 13:09:33,680 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 441 plays from 0022401104.csv
+2025-10-29 13:09:33,683 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 517 plays from 0022400554.csv
+2025-10-29 13:09:33,685 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 516 plays from 0042400402.csv
+2025-10-29 13:09:33,687 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Loaded 499 plays from 0042400204.csv
+2025-10-29 13:09:33,687 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Successfully loaded 109 games
+2025-10-29 13:09:33,687 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Merging 109 games
+2025-10-29 13:09:33,687 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 1/109
+2025-10-29 13:09:33,702 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 2/109
+2025-10-29 13:09:33,711 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 3/109
+2025-10-29 13:09:33,719 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 4/109
+2025-10-29 13:09:33,728 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 5/109
+2025-10-29 13:09:33,736 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 6/109
+2025-10-29 13:09:33,744 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 7/109
+2025-10-29 13:09:33,752 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 8/109
+2025-10-29 13:09:33,761 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 9/109
+2025-10-29 13:09:33,769 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 10/109
+2025-10-29 13:09:33,777 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 11/109
+2025-10-29 13:09:33,786 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 12/109
+2025-10-29 13:09:33,795 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 13/109
+2025-10-29 13:09:33,803 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 14/109
+2025-10-29 13:09:33,812 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 15/109
+2025-10-29 13:09:33,821 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 16/109
+2025-10-29 13:09:33,829 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 17/109
+2025-10-29 13:09:33,837 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 18/109
+2025-10-29 13:09:33,846 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 19/109
+2025-10-29 13:09:33,855 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 20/109
+2025-10-29 13:09:33,864 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 21/109
+2025-10-29 13:09:33,873 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 22/109
+2025-10-29 13:09:33,881 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 23/109
+2025-10-29 13:09:33,891 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 24/109
+2025-10-29 13:09:33,898 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 25/109
+2025-10-29 13:09:33,907 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 26/109
+2025-10-29 13:09:33,915 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 27/109
+2025-10-29 13:09:33,923 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 28/109
+2025-10-29 13:09:33,931 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 29/109
+2025-10-29 13:09:33,939 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 30/109
+2025-10-29 13:09:33,948 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 31/109
+2025-10-29 13:09:33,959 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 32/109
+2025-10-29 13:09:33,968 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 33/109
+2025-10-29 13:09:33,977 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 34/109
+2025-10-29 13:09:33,985 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 35/109
+2025-10-29 13:09:33,994 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 36/109
+2025-10-29 13:09:34,002 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 37/109
+2025-10-29 13:09:34,011 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 38/109
+2025-10-29 13:09:34,019 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 39/109
+2025-10-29 13:09:34,027 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 40/109
+2025-10-29 13:09:34,035 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 41/109
+2025-10-29 13:09:34,043 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 42/109
+2025-10-29 13:09:34,051 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 43/109
+2025-10-29 13:09:34,059 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 44/109
+2025-10-29 13:09:34,067 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 45/109
+2025-10-29 13:09:34,076 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 46/109
+2025-10-29 13:09:34,084 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 47/109
+2025-10-29 13:09:34,093 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 48/109
+2025-10-29 13:09:34,101 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 49/109
+2025-10-29 13:09:34,110 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 50/109
+2025-10-29 13:09:34,117 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 51/109
+2025-10-29 13:09:34,126 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 52/109
+2025-10-29 13:09:34,133 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 53/109
+2025-10-29 13:09:34,143 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 54/109
+2025-10-29 13:09:34,151 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 55/109
+2025-10-29 13:09:34,160 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 56/109
+2025-10-29 13:09:34,168 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 57/109
+2025-10-29 13:09:34,177 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 58/109
+2025-10-29 13:09:34,186 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 59/109
+2025-10-29 13:09:34,194 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 60/109
+2025-10-29 13:09:34,202 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 61/109
+2025-10-29 13:09:34,212 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 62/109
+2025-10-29 13:09:34,220 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 63/109
+2025-10-29 13:09:34,228 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 64/109
+2025-10-29 13:09:34,238 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 65/109
+2025-10-29 13:09:34,246 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 66/109
+2025-10-29 13:09:34,255 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 67/109
+2025-10-29 13:09:34,263 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 68/109
+2025-10-29 13:09:34,271 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 69/109
+2025-10-29 13:09:34,280 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 70/109
+2025-10-29 13:09:34,289 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 71/109
+2025-10-29 13:09:34,297 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 72/109
+2025-10-29 13:09:34,307 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 73/109
+2025-10-29 13:09:34,316 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 74/109
+2025-10-29 13:09:34,324 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 75/109
+2025-10-29 13:09:34,332 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 76/109
+2025-10-29 13:09:34,341 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 77/109
+2025-10-29 13:09:34,350 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 78/109
+2025-10-29 13:09:34,358 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 79/109
+2025-10-29 13:09:34,367 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 80/109
+2025-10-29 13:09:34,375 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 81/109
+2025-10-29 13:09:34,383 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 82/109
+2025-10-29 13:09:34,392 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 83/109
+2025-10-29 13:09:34,399 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 84/109
+2025-10-29 13:09:34,408 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 85/109
+2025-10-29 13:09:34,417 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 86/109
+2025-10-29 13:09:34,426 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 87/109
+2025-10-29 13:09:34,435 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 88/109
+2025-10-29 13:09:34,444 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 89/109
+2025-10-29 13:09:34,453 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 90/109
+2025-10-29 13:09:34,462 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 91/109
+2025-10-29 13:09:34,472 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 92/109
+2025-10-29 13:09:34,482 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 93/109
+2025-10-29 13:09:34,492 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 94/109
+2025-10-29 13:09:34,503 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 95/109
+2025-10-29 13:09:34,516 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 96/109
+2025-10-29 13:09:34,526 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 97/109
+2025-10-29 13:09:34,535 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 98/109
+2025-10-29 13:09:34,545 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 99/109
+2025-10-29 13:09:34,553 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 100/109
+2025-10-29 13:09:34,562 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 101/109
+2025-10-29 13:09:34,571 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 102/109
+2025-10-29 13:09:34,635 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 103/109
+2025-10-29 13:09:34,705 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 104/109
+2025-10-29 13:09:34,729 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 105/109
+2025-10-29 13:09:34,738 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 106/109
+2025-10-29 13:09:34,746 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 107/109
+2025-10-29 13:09:34,755 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 108/109
+2025-10-29 13:09:34,764 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Cleaning game 109/109
+2025-10-29 13:09:34,806 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Merged data: 48912 total plays across 109 games
+2025-10-29 13:09:34,931 - backend.services.data_ingestion.process_playbyplay_v3 - INFO - Saved 48912 plays to data/processed/playbyplay_indiana_pacers_2024_25_cleaned.csv
+2025-10-29 13:09:34,947 - __main__ - INFO - Completed processing play-by-play data for Indiana Pacers 2024-25
+2025-10-29 13:09:34,947 - __main__ - INFO - Results: {'total_plays': 48912, 'total_games': 109, 'avg_plays_per_game': 448.73394495412845, 'event_categories': {'SHOT': 24371, 'REBOUND': 11206, 'SUBSTITUTION': 5847, 'FOUL': 4374, 'TURNOVER': 3114}, 'periods': {1: 11611, 2: 12256, 3: 12138, 4: 12398, 5: 468, 6: 41}, 'score_margin_stats': {'mean': 0.3479105332024861, 'std': 5.766242040414265, 'min': -57, 'max': 59}, 'missing_values': {'HOMEDESCRIPTION': 0, 'PLAYER1_NAME': 2001}, 'duration_info': {'min_seconds': 0, 'max_seconds': 2876, 'mean_seconds': 1387.7838567222768}}

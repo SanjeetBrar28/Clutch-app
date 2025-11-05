@@ -1,0 +1,82 @@
+
+============================================================
+Validation Report - 2025-10-29 13:45:18
+============================================================
+
+✅ Processed 48,912 events across 109 games
+
+📊 Event type distribution:
+   SHOT: 19,529 (39.93%)
+   REBOUND: 11,206 (22.91%)
+   SUBSTITUTION: 5,847 (11.95%)
+   FREE_THROW: 5,013 (10.25%)
+   FOUL: 4,733 (9.68%)
+   TURNOVER: 2,584 (5.28%)
+
+🔍 Missing field counts:
+   GAME_ID: 0 ✓
+   EVENTNUM: 0 ✓
+   PERIOD: 0 ✓
+   PLAYER1_NAME: 2,001
+   HOMEDESCRIPTION: 0 ✓
+   VISITORDESCRIPTION: 48,912
+   TEAM_ID_HOME: 0 ✓
+   TEAM_ID_AWAY: 48,912
+
+📈 Numeric field statistics:
+   score_margin_int:
+      Min: -57.0, Max: 59.0, Mean: 0.35
+      Null count: 0
+   seconds_remaining_period:
+      Min: 0.0, Max: 720.0, Mean: 335.53
+      Null count: 0
+   total_seconds_remaining:
+      Min: 0.0, Max: 2876.0, Mean: 1387.78
+      Null count: 0
+   PERIOD:
+      Min: 1.0, Max: 6.0, Mean: 2.55
+      Null count: 0
+
+============================================================
+
+
+============================================================
+Validation Report - 2025-10-29 13:49:02
+============================================================
+
+✅ Processed 48,912 events across 109 games
+
+📊 Event type distribution:
+   SHOT: 19,529 (39.93%)
+   REBOUND: 11,206 (22.91%)
+   SUBSTITUTION: 5,847 (11.95%)
+   FREE_THROW: 5,013 (10.25%)
+   FOUL: 4,733 (9.68%)
+   TURNOVER: 2,584 (5.28%)
+
+🔍 Missing field counts:
+   GAME_ID: 0 ✓
+   EVENTNUM: 0 ✓
+   PERIOD: 0 ✓
+   PLAYER1_NAME: 2,001
+   HOMEDESCRIPTION: 0 ✓
+   VISITORDESCRIPTION: 48,912
+   TEAM_ID_HOME: 0 ✓
+   TEAM_ID_AWAY: 48,912
+
+📈 Numeric field statistics:
+   score_margin_int:
+      Min: -57.0, Max: 59.0, Mean: 0.35
+      Null count: 0
+   seconds_remaining_period:
+      Min: 0.0, Max: 720.0, Mean: 335.53
+      Null count: 0
+   total_seconds_remaining:
+      Min: 0.0, Max: 2876.0, Mean: 1387.78
+      Null count: 0
+   PERIOD:
+      Min: 1.0, Max: 6.0, Mean: 2.55
+      Null count: 0
+
+============================================================
+
