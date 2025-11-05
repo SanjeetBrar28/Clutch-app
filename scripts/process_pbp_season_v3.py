@@ -173,13 +173,36 @@ def main():
             print("❌ No data after processing")
             sys.exit(1)
         
+        # Validate data before saving
+        print(f"\n🔍 Validating processed data...")
+        validation_results = processor.validate_data(merged_df)
+        
+        # Log validation results
+        validation_log_path = os.path.join('data', 'logs', 'process_validation.log')
+        processor.log_validation_results(validation_results, validation_log_path)
+        
+        # Print validation summary
+        print(f"\n✅ Processed {validation_results['total_rows']:,} events across {validation_results['unique_games']} games")
+        print(f"\n📊 Event type distribution:")
+        for category, count in sorted(validation_results['event_category_distribution'].items(), 
+                                     key=lambda x: x[1], reverse=True):
+            percentage = (count / validation_results['total_rows']) * 100 if validation_results['total_rows'] > 0 else 0
+            print(f"   {category}: {count:,} ({percentage:.2f}%)")
+        
+        print(f"\n🔍 Missing field counts:")
+        for field, count in validation_results['missing_field_counts'].items():
+            if count > 0:
+                print(f"   {field}: {count:,}")
+            else:
+                print(f"   {field}: 0 ✓")
+        
         # Generate output filename
         if args.output:
             output_filename = args.output
         else:
             safe_team_name = team_info['full_name'].replace(' ', '_').lower()
             safe_season = args.season.replace('-', '_')
-            output_filename = f"playbyplay_{safe_team_name}_{safe_season}.csv"
+            output_filename = f"playbyplay_{safe_team_name}_{safe_season}_cleaned.csv"
         
         # Save processed data
         print(f"\n💾 Saving processed data...")
@@ -192,36 +215,61 @@ def main():
         # Get data summary
         summary = processor.get_data_summary(merged_df)
         
+        print(f"\n✅ Processed {summary['total_plays']:,} plays across {summary['total_games']} games")
+        print(f"📝 Saved to {output_path}")
+        
         print(f"\n📊 Processing Summary:")
         print(f"   Total Plays: {summary['total_plays']:,}")
         print(f"   Total Games: {summary['total_games']}")
         print(f"   Avg Plays/Game: {summary['avg_plays_per_game']:.1f}")
         
+        if summary.get('duration_info'):
+            dur = summary['duration_info']
+            print(f"\n⏱️  Duration Info:")
+            print(f"   Min Seconds Remaining: {dur.get('min_seconds', 0):,}")
+            print(f"   Max Seconds Remaining: {dur.get('max_seconds', 0):,}")
+            print(f"   Avg Seconds Remaining: {dur.get('mean_seconds', 0):.1f}")
+        
+        if summary.get('missing_values'):
+            print(f"\n🔍 Missing Values:")
+            for col, count in summary['missing_values'].items():
+                if count > 0:
+                    print(f"   {col}: {count:,}")
+        
         print(f"\n📈 Event Categories:")
-        for category, count in summary['event_categories'].items():
-            percentage = (count / summary['total_plays']) * 100
+        for category, count in sorted(summary['event_categories'].items(), key=lambda x: x[1], reverse=True):
+            percentage = (count / summary['total_plays']) * 100 if summary['total_plays'] > 0 else 0
             print(f"   {category}: {count:,} ({percentage:.1f}%)")
         
-        print(f"\n⏱️  Periods:")
-        for period, count in summary['periods'].items():
-            print(f"   Period {period}: {count:,} plays")
+        if summary['periods']:
+            print(f"\n⏱️  Periods:")
+            for period in sorted(summary['periods'].keys()):
+                count = summary['periods'][period]
+                print(f"   Period {period}: {count:,} plays")
         
-        print(f"\n📊 Score Margin Stats:")
-        print(f"   Mean: {summary['score_margin_stats']['mean']:.1f}")
-        print(f"   Std: {summary['score_margin_stats']['std']:.1f}")
-        print(f"   Range: {summary['score_margin_stats']['min']:.1f} to {summary['score_margin_stats']['max']:.1f}")
+        if summary.get('score_margin_stats'):
+            sm = summary['score_margin_stats']
+            print(f"\n📊 Score Margin Stats:")
+            print(f"   Mean: {sm.get('mean', 0):.1f}")
+            print(f"   Std: {sm.get('std', 0):.1f}")
+            print(f"   Range: {sm.get('min', 0)} to {sm.get('max', 0)}")
         
         # Log final results
         logger.info(f"Completed processing play-by-play data for {args.team} {args.season}")
         logger.info(f"Results: {summary}")
+        logger.info(f"Validation results: {validation_results}")
         
         print(f"\n🎉 Data processing completed!")
         print(f"📁 Processed file saved to: {output_path}")
-        print(f"📝 Log saved to: {log_file}")
+        print(f"📝 Processing log saved to: {log_file}")
+        print(f"📊 Validation log saved to: {validation_log_path}")
         
         # File size info
         file_size = os.path.getsize(output_path)
         print(f"📏 File size: {file_size:,} bytes ({file_size / (1024*1024):.1f} MB)")
+        
+        if validation_results.get('validation_passed'):
+            print(f"\n✅ Validation passed - data is ready for modeling!")
         
     except KeyboardInterrupt:
         print("\n⚠️ Operation cancelled by user")
