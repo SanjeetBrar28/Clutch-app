@@ -149,7 +149,14 @@ def infer_game_outcomes_from_data(df: pd.DataFrame) -> pd.DataFrame:
         
         # Get final score margin - use the last non-zero margin if final event has margin = 0
         # This handles cases where final events are substitutions/fouls that don't change score
+        # IMPORTANT: score_margin_int is from tracked team's perspective, not home team's!
+        # We need to check if tracked team is home to correctly infer home_win
         final_margin = game_events['score_margin_int'].iloc[-1]
+        
+        # Get tracked_team_is_home (per-game flag)
+        tracked_team_is_home = False
+        if 'tracked_team_is_home' in game_events.columns:
+            tracked_team_is_home = bool(game_events['tracked_team_is_home'].iloc[-1])
         
         # If final margin is 0, look backwards to find the last non-zero margin
         if final_margin == 0:
@@ -166,16 +173,28 @@ def infer_game_outcomes_from_data(df: pd.DataFrame) -> pd.DataFrame:
         if pd.isna(final_margin):
             # If margin is still missing, default to 0 (away win) - less biased than defaulting to home
             home_win = 0
-        elif final_margin > 0:
-            home_win = 1  # Home team won
-        elif final_margin < 0:
-            home_win = 0  # Away team won
         else:
-            # Margin is exactly 0 (tied game) - use is_home as tie-breaker
-            # If Pacers are home, default to home win; if away, default to away win
-            # This is less biased than always defaulting to home
-            is_home = game_events['is_home'].iloc[-1] if 'is_home' in game_events.columns else True
-            home_win = 1 if is_home else 0
+            # Convert score_margin_int (tracked team perspective) to home team perspective
+            # If tracked team is home: margin > 0 means home is winning
+            # If tracked team is away: margin > 0 means away is winning (home is losing)
+            if tracked_team_is_home:
+                # Tracked team is home: margin > 0 means home won
+                if final_margin > 0:
+                    home_win = 1  # Home team won
+                elif final_margin < 0:
+                    home_win = 0  # Away team won
+                else:
+                    # Margin is exactly 0 (tied game) - default to home win
+                    home_win = 1
+            else:
+                # Tracked team is away: margin > 0 means away won (home lost)
+                if final_margin > 0:
+                    home_win = 0  # Away team won (tracked team is away and leading)
+                elif final_margin < 0:
+                    home_win = 1  # Home team won (tracked team is away and losing)
+                else:
+                    # Margin is exactly 0 (tied game) - default to home win
+                    home_win = 1
         
         game_outcomes.append({
             'GAME_ID': game_id,
@@ -326,7 +345,47 @@ def main():
         
         # Build features
         logger.info("\n🔧 Building features...")
-        df_features = build_wp_features(df)
+        
+        # Convert score_margin_int to score_margin_home (from home team's perspective)
+        # score_margin_int is from tracked team's perspective, we need home team perspective
+        # Determine if tracked team (team_abbrev) is home per game
+        df = df.copy()
+        
+        # Get team info to find team ID
+        game_utils = GameUtils()
+        team_info = game_utils.get_team_info(args.team)
+        if team_info:
+            tracked_team_id = team_info['id']
+        else:
+            # Fallback: try to infer from data
+            tracked_team_id = None
+        
+        # Determine per-game if tracked team is home
+        # Check if tracked_team_is_home already exists from processing (preferred)
+        if 'tracked_team_is_home' in df.columns:
+            # Use existing column from processing (boolean True/False)
+            # Convert to int for consistency
+            tracked_team_is_home = df['tracked_team_is_home'].astype(int)
+            logger.info("Using tracked_team_is_home from processed data")
+        elif 'TEAM_ID_HOME' in df.columns and tracked_team_id:
+            # Fallback: calculate from TEAM_ID_HOME if not in processed data
+            tracked_team_is_home = (df['TEAM_ID_HOME'] == tracked_team_id).astype(int)
+            logger.info("Calculated tracked_team_is_home from TEAM_ID_HOME")
+        else:
+            # Final fallback: use is_home column (less reliable, but might work)
+            logger.warning("Could not determine tracked team ID, using is_home column as fallback")
+            tracked_team_is_home = df['is_home'].astype(int)
+        
+        # Convert margin: if tracked team is home, margin is already from home perspective
+        # If tracked team is away, flip the sign to get home perspective
+        df['score_margin_home'] = np.where(
+            tracked_team_is_home == 1,
+            df['score_margin_int'],
+            -df['score_margin_int']
+        )
+        
+        # Now build features using score_margin_home
+        df_features = build_wp_features(df, score_margin_col='score_margin_home')
         
         # Initialize WP model
         logger.info("\n📊 Initializing Win Probability model...")
@@ -358,12 +417,19 @@ def main():
         # Compute event-level WPA
         wpa_df = calculator.compute_event_wpa(df_features, game_outcomes)
         
-        # Attribute WPA to players
+        # Attribute WPA to players (no tracked team logic - uses home/away directly)
         wpa_df = calculator.attribute_wpa_to_players(wpa_df)
         
         # Aggregate to player level
         logger.info("\n👥 Aggregating player Clutch Scores...")
         player_stats = calculator.aggregate_player_wpa(wpa_df)
+        
+        # Run diagnostics before saving
+        calculator.run_diagnostics(wpa_df, player_stats, game_outcomes)
+        
+        # Drop unassigned placeholder rows before saving results
+        if '__UNASSIGNED__' in player_stats['player_name'].values:
+            player_stats = player_stats[player_stats['player_name'] != '__UNASSIGNED__'].reset_index(drop=True)
         
         # Save outputs
         logger.info("\n💾 Saving outputs...")
