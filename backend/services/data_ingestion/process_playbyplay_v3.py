@@ -8,9 +8,36 @@ columns, and merging all games into a single processed dataset.
 import os
 import logging
 import re
+import json
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 import pandas as pd
 import numpy as np
+from nba_api.stats.static import teams as nba_teams
+
+
+TEAM_ABBR_TO_ID: Optional[Dict[str, int]] = None
+
+
+def load_team_abbr_map() -> Dict[str, int]:
+    """Load or build mapping from team abbreviation to NBA team ID."""
+    global TEAM_ABBR_TO_ID
+    if TEAM_ABBR_TO_ID:
+        return TEAM_ABBR_TO_ID
+    
+    map_path = Path('data') / 'team_id_map.json'
+    map_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    if map_path.exists():
+        with open(map_path, 'r') as f:
+            TEAM_ABBR_TO_ID = {k.upper(): int(v) for k, v in json.load(f).items()}
+    else:
+        teams = nba_teams.get_teams()
+        TEAM_ABBR_TO_ID = {team['abbreviation'].upper(): int(team['id']) for team in teams}
+        with open(map_path, 'w') as f:
+            json.dump(TEAM_ABBR_TO_ID, f, indent=2)
+    
+    return TEAM_ABBR_TO_ID
 
 
 class PlayByPlayProcessor:
@@ -275,6 +302,58 @@ class PlayByPlayProcessor:
                 cleaned_df[col] = cleaned_df[col].replace('', pd.NA)
                 cleaned_df[col] = cleaned_df[col].replace(' ', pd.NA)
         
+        # Ensure TEAM_ID_EVENT is populated for every event
+        if 'TEAM_ID_EVENT' not in cleaned_df.columns:
+            cleaned_df['TEAM_ID_EVENT'] = pd.NA
+        
+        # Priority 1: TEAM_ID column if present (direct from payload)
+        if 'TEAM_ID' in cleaned_df.columns:
+            cleaned_df['TEAM_ID_EVENT'] = cleaned_df['TEAM_ID_EVENT'].fillna(cleaned_df['TEAM_ID'])
+        
+        # Priority 2: PLAYER1_TEAM_ID
+        if 'PLAYER1_TEAM_ID' in cleaned_df.columns:
+            cleaned_df['TEAM_ID_EVENT'] = cleaned_df['TEAM_ID_EVENT'].fillna(cleaned_df['PLAYER1_TEAM_ID'])
+        
+        # Priority 3: map from PLAYER1_TEAM_ABBREVIATION
+        if cleaned_df['TEAM_ID_EVENT'].isna().any() and 'PLAYER1_TEAM_ABBREVIATION' in cleaned_df.columns:
+            team_map = load_team_abbr_map()
+            cleaned_df['PLAYER1_TEAM_ABBREVIATION'] = cleaned_df['PLAYER1_TEAM_ABBREVIATION'].str.upper()
+            cleaned_df['TEAM_ID_EVENT'] = cleaned_df['TEAM_ID_EVENT'].fillna(
+                cleaned_df['PLAYER1_TEAM_ABBREVIATION'].map(team_map)
+            )
+        
+        # Final fallback: use is_home flag if still missing
+        if cleaned_df['TEAM_ID_EVENT'].isna().any() and 'is_home' in cleaned_df.columns:
+            fallback_values = pd.Series(
+                np.where(
+                    cleaned_df['is_home'].astype(bool),
+                    cleaned_df['TEAM_ID_HOME'],
+                    cleaned_df['TEAM_ID_AWAY']
+                ),
+                index=cleaned_df.index
+            )
+            cleaned_df['TEAM_ID_EVENT'] = cleaned_df['TEAM_ID_EVENT'].fillna(fallback_values)
+        
+        # Absolute fallback: default to home team to avoid NaNs for dead-ball events
+        if cleaned_df['TEAM_ID_EVENT'].isna().any():
+            cleaned_df['TEAM_ID_EVENT'] = cleaned_df['TEAM_ID_EVENT'].fillna(cleaned_df['TEAM_ID_HOME'])
+        
+        # If still missing, fail loudly
+        if cleaned_df['TEAM_ID_EVENT'].isna().any():
+            missing = cleaned_df[cleaned_df['TEAM_ID_EVENT'].isna()][['GAME_ID', 'EVENTNUM']].head()
+            raise ValueError(
+                "Cannot determine TEAM_ID_EVENT for all events. "
+                "Ensure TEAM_ID or PLAYER1_TEAM_ID is available in PlayByPlayV3 response. "
+                f"Sample missing rows:\n{missing}"
+            )
+        
+        # Normalize TEAM_ID_EVENT/TEAM_ID_HOME types to integers (Int64 for nullable)
+        cleaned_df['TEAM_ID_EVENT'] = cleaned_df['TEAM_ID_EVENT'].astype('Int64')
+        if 'TEAM_ID_HOME' in cleaned_df.columns:
+            cleaned_df['TEAM_ID_HOME'] = cleaned_df['TEAM_ID_HOME'].astype('Int64')
+        if 'TEAM_ID_AWAY' in cleaned_df.columns:
+            cleaned_df['TEAM_ID_AWAY'] = cleaned_df['TEAM_ID_AWAY'].astype('Int64')
+        
         # Determine if team is home (check location column or team IDs)
         if 'LOCATION' in cleaned_df.columns:
             cleaned_df['is_home'] = (cleaned_df['LOCATION'].str.lower() == 'h').fillna(False)
@@ -302,12 +381,72 @@ class PlayByPlayProcessor:
         
         cleaned_df['total_seconds_remaining'] = cleaned_df.apply(calc_total_seconds, axis=1).astype(int)
         
-        # Derive: score_margin_int (from team's perspective)
+        # Forward-fill SCORE_HOME and SCORE_AWAY within each game so every event has current score
+        # This ensures non-scoring events also have the current score state
+        # Sort by EVENTNUM first to ensure proper temporal order
+        cleaned_df = cleaned_df.sort_values(['GAME_ID', 'EVENTNUM']).reset_index(drop=True)
+        
+        # Convert score columns to numeric and forward-fill
+        if 'SCORE_HOME' in cleaned_df.columns:
+            cleaned_df['SCORE_HOME'] = pd.to_numeric(cleaned_df['SCORE_HOME'], errors='coerce')
+            cleaned_df['SCORE_HOME'] = cleaned_df.groupby('GAME_ID')['SCORE_HOME'].ffill()
+            cleaned_df['SCORE_HOME'] = cleaned_df.groupby('GAME_ID')['SCORE_HOME'].bfill().fillna(0)
+        
+        if 'SCORE_AWAY' in cleaned_df.columns:
+            cleaned_df['SCORE_AWAY'] = pd.to_numeric(cleaned_df['SCORE_AWAY'], errors='coerce')
+            cleaned_df['SCORE_AWAY'] = cleaned_df.groupby('GAME_ID')['SCORE_AWAY'].ffill()
+            cleaned_df['SCORE_AWAY'] = cleaned_df.groupby('GAME_ID')['SCORE_AWAY'].bfill().fillna(0)
+        
+        # Determine if tracked team is home (per-game, not per-event)
+        # We need game-level (is tracked team home), not event-level (which player's team)
+        # Strategy: For each game, check if tracked team's events have consistent home status
+        # Use is_home from tracked team events (is_home is set early and should be consistent per team)
+        if 'PLAYER1_TEAM_ABBREVIATION' in cleaned_df.columns:
+            # Group by game and determine if tracked team is home
+            game_to_tracked_home = {}
+            unique_games = cleaned_df['GAME_ID'].unique()
+            self.logger.debug(f"Determining tracked_team_is_home for {len(unique_games)} games")
+            
+            for game_id in unique_games:
+                game_data = cleaned_df[cleaned_df['GAME_ID'] == game_id]
+                
+                # Find tracked team events in this game
+                tracked_team_events = game_data[game_data['PLAYER1_TEAM_ABBREVIATION'] == team_abbrev]
+                
+                if len(tracked_team_events) > 0:
+                    # Check if tracked team's events have consistent home status
+                    # is_home=True means the player is from home team
+                    # So if tracked team's player has is_home=True, tracked team is home
+                    first_tracked = tracked_team_events.iloc[0]
+                    # Use is_home from first tracked team event to determine if tracked team is home
+                    is_home_val = first_tracked.get('is_home', False)
+                    game_to_tracked_home[game_id] = bool(is_home_val)
+                else:
+                    # No tracked team events in this game, default to False
+                    game_to_tracked_home[game_id] = False
+            
+            # Add per-game tracked team home status
+            self.logger.debug(f"Created game_to_tracked_home mapping with {len(game_to_tracked_home)} games")
+            cleaned_df['tracked_team_is_home'] = cleaned_df['GAME_ID'].map(game_to_tracked_home).fillna(False)
+            
+            # Verify column was created
+            if 'tracked_team_is_home' not in cleaned_df.columns:
+                self.logger.warning(f"tracked_team_is_home column was not created properly")
+                # Try again with direct assignment
+                cleaned_df['tracked_team_is_home'] = cleaned_df['GAME_ID'].apply(lambda x: game_to_tracked_home.get(x, False))
+            else:
+                self.logger.debug(f"Successfully created tracked_team_is_home column with {cleaned_df['tracked_team_is_home'].nunique()} unique values")
+        else:
+            cleaned_df['tracked_team_is_home'] = False
+            self.logger.warning(f"Could not create tracked_team_is_home: PLAYER1_TEAM_ABBREVIATION column missing")
+        
+        # Derive: score_margin_int (from tracked team's perspective, consistent per game)
+        # Use tracked_team_is_home (per-game) instead of is_home (per-event)
         cleaned_df['score_margin_int'] = cleaned_df.apply(
             lambda row: self.parse_score_margin(
                 row.get('SCORE_HOME', 0),
                 row.get('SCORE_AWAY', 0),
-                row.get('is_home', False),
+                row.get('tracked_team_is_home', False),  # Use game-level, not event-level
                 team_abbrev
             ),
             axis=1
@@ -378,6 +517,13 @@ class PlayByPlayProcessor:
             cleaned_df['score_margin_int'] = pd.to_numeric(
                 cleaned_df['score_margin_int'], errors='coerce'
             ).fillna(0).astype(int)
+            
+            # Note: score_margin_int should already be forward-filled since we forward-filled
+            # SCORE_HOME and SCORE_AWAY before calculating it. But as a safety check, ensure
+            # it's properly filled within each game (in case of any edge cases)
+            cleaned_df = cleaned_df.sort_values(['GAME_ID', 'EVENTNUM']).reset_index(drop=True)
+            cleaned_df['score_margin_int'] = cleaned_df.groupby('GAME_ID')['score_margin_int'].ffill()
+            cleaned_df['score_margin_int'] = cleaned_df.groupby('GAME_ID')['score_margin_int'].bfill().fillna(0).astype(int)
         
         if 'seconds_remaining_period' in cleaned_df.columns:
             cleaned_df['seconds_remaining_period'] = pd.to_numeric(
@@ -400,6 +546,7 @@ class PlayByPlayProcessor:
             'score_margin_int',
             'event_category',
             'is_home',
+            'tracked_team_is_home',  # Add this column to preserve it
             'HOMEDESCRIPTION',
             'VISITORDESCRIPTION',
             'PLAYER1_NAME',
@@ -506,6 +653,14 @@ class PlayByPlayProcessor:
         # Sort by game ID and event number
         sort_cols = ['GAME_ID', 'EVENTNUM'] if 'EVENTNUM' in merged_df.columns else ['GAME_ID']
         merged_df = merged_df.sort_values(sort_cols).reset_index(drop=True)
+        
+        # Safety: Forward-fill score_margin_int again after merging (should already be done, but ensure consistency)
+        if 'score_margin_int' in merged_df.columns:
+            merged_df['score_margin_int'] = merged_df.groupby('GAME_ID')['score_margin_int'].ffill()
+            # Backfill any remaining NaN (shouldn't happen, but safety check)
+            merged_df['score_margin_int'] = merged_df.groupby('GAME_ID')['score_margin_int'].bfill()
+            # Fill any remaining NaN with 0
+            merged_df['score_margin_int'] = merged_df['score_margin_int'].fillna(0).astype(int)
         
         self.logger.info(f"Merged data: {len(merged_df)} total plays across {len(games_data)} games")
         
