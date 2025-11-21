@@ -15,3 +15,5 @@ models/artifacts/
 .DS_Store
 .idea/
 .vscode/
+data/processed/*.csv
+data/raw/*.csv
