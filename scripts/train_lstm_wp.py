@@ -32,11 +32,18 @@ def parse_args() -> argparse.Namespace:
         default=Path("data/processed/playbyplay_2025_all_teams_enhanced.csv"),
         help="Path to merged play-by-play CSV.",
     )
-    parser.add_argument("--epochs", type=int, default=6)
+    parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--learning-rate", type=float, default=1e-3)
+    parser.add_argument("--hidden-size", type=int, default=256)
+    parser.add_argument("--num-layers", type=int, default=2)
+    parser.add_argument("--dropout", type=float, default=0.2)
+    parser.add_argument("--numeric-projection-dim", type=int, default=64)
     parser.add_argument("--test-split", type=float, default=0.2)
     parser.add_argument("--num-workers", type=int, default=0)
+    parser.add_argument("--early-stop-patience", type=int, default=4)
+    parser.add_argument("--lr-step-size", type=int, default=5, help="Epoch interval to decay LR (0 disables scheduler).")
+    parser.add_argument("--lr-gamma", type=float, default=0.5, help="Multiplicative factor of LR decay.")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu")
     return parser.parse_args()
@@ -50,11 +57,22 @@ def set_seed(seed: int) -> None:
         torch.cuda.manual_seed_all(seed)
 
 
-def split_games(game_sequences: Dict[str, Dict], test_split: float, seed: int) -> Tuple[list, list]:
+def split_games(
+    game_sequences: Dict[str, Dict],
+    test_split: float,
+    seed: int
+) -> Tuple[list, list]:
+    from sklearn.model_selection import train_test_split
+
     game_ids = list(game_sequences.keys())
-    random.Random(seed).shuffle(game_ids)
-    split_idx = int(len(game_ids) * (1 - test_split))
-    return game_ids[:split_idx], game_ids[split_idx:]
+    labels = [int(game_sequences[gid]["target"][0]) for gid in game_ids]
+    train_ids, val_ids = train_test_split(
+        game_ids,
+        test_size=test_split,
+        random_state=seed,
+        stratify=labels,
+    )
+    return train_ids, val_ids
 
 
 def build_dataloaders(
@@ -166,14 +184,30 @@ def main() -> None:
     )
 
     device = torch.device(args.device)
-    model = LSTMWinProbModel(numeric_dim=numeric_dim, vocab_sizes=vocab_sizes)
+    model = LSTMWinProbModel(
+        numeric_dim=numeric_dim,
+        vocab_sizes=vocab_sizes,
+        hidden_size=args.hidden_size,
+        num_layers=args.num_layers,
+        dropout=args.dropout,
+        numeric_projection_dim=args.numeric_projection_dim,
+    )
     model.to(device)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)
+    scheduler = None
+    if args.lr_step_size > 0:
+        scheduler = torch.optim.lr_scheduler.StepLR(
+            optimizer,
+            step_size=args.lr_step_size,
+            gamma=args.lr_gamma,
+        )
 
     history = []
     best_val_auc = -float("inf")
     best_state = None
+    best_epoch = 0
+    epochs_since_improve = 0
 
     for epoch in range(1, args.epochs + 1):
         model.train()
@@ -209,10 +243,22 @@ def main() -> None:
             f"val_loss={val_loss:.4f}, val_auc={val_auc}"
         )
 
-        if val_auc is not None and val_auc > best_val_auc:
+        if scheduler:
+            scheduler.step()
+
+        improved = val_auc is not None and val_auc > best_val_auc
+        if improved:
             best_val_auc = val_auc
             best_state = model.state_dict()
+            best_epoch = epoch
             plot_calibration(val_probs, val_targets, Path("data/processed/wp_lstm_calibration.png"))
+            epochs_since_improve = 0
+        else:
+            epochs_since_improve += 1
+
+        if args.early_stop_patience > 0 and epochs_since_improve >= args.early_stop_patience:
+            print(f"Early stopping at epoch {epoch} (best epoch {best_epoch}, val_auc={best_val_auc}).")
+            break
 
     artifacts_dir = Path("models/artifacts")
     artifacts_dir.mkdir(parents=True, exist_ok=True)
