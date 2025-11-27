@@ -136,11 +136,16 @@ def build_lstm_sequences(
     df = df.sort_values(["GAME_ID", "EVENTNUM"]).reset_index(drop=True)
 
     # Numeric normalization stats (z-score)
-    numeric_stats = _compute_numeric_stats(df, base_numeric_cols)
-    for col in base_numeric_cols:
+    # Numeric normalization stats (z-score), excluding binary indicators
+    binary_cols = {"possession_change", "turnover_flag", "foul_flag"}
+    stats_cols = [col for col in base_numeric_cols if col not in binary_cols]
+    numeric_stats = _compute_numeric_stats(df, stats_cols)
+    for col in stats_cols:
         mean = numeric_stats[col]["mean"]
         std = numeric_stats[col]["std"]
         df[col] = ((df[col] - mean) / std).fillna(0.0)
+    for col in binary_cols:
+        numeric_stats[col] = {"mean": 0.0, "std": 1.0}
 
     # Build categorical vocabularies
     vocab_store: Dict[str, Dict[str, int]] = {}
