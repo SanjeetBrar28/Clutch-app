@@ -95,8 +95,15 @@ def build_lstm_sequences(
     for col in base_numeric_cols:
         if col not in df.columns:
             if col == "score_margin_home":
-                df["score_margin_home"] = df["home_score"] - df["away_score"]
-            elif col == "leverage_index" and "leverage_index" not in df.columns:
+                if "score_margin_int" in df.columns and "tracked_team_is_home" in df.columns:
+                    df["score_margin_home"] = np.where(
+                        df["tracked_team_is_home"].astype(int) == 1,
+                        df["score_margin_int"],
+                        -df["score_margin_int"],
+                    )
+                else:
+                    raise ValueError("Need score_margin_int and tracked_team_is_home to compute score_margin_home.")
+            elif col == "leverage_index":
                 df["leverage_index"] = 1.0
             else:
                 raise ValueError(f"Column '{col}' required for numeric features.")
@@ -135,9 +142,15 @@ def build_lstm_sequences(
 
     # Prepare sequences per game
     game_sequences: Dict[str, Dict[str, Any]] = {}
-    home_results = df.groupby("GAME_ID", sort=False).apply(
-        lambda g: 1 if (g["home_score"].iloc[-1] - g["away_score"].iloc[-1]) > 0 else 0
-    )
+    def infer_home_win(group: pd.DataFrame) -> float:
+        home_view = group[group["tracked_team_is_home"].astype(bool)]
+        if not home_view.empty:
+            margin = home_view["score_margin_int"].iloc[-1]
+        else:
+            margin = -group["score_margin_int"].iloc[-1]
+        return 1.0 if margin > 0 else 0.0
+
+    home_results = df.groupby("GAME_ID", sort=False).apply(infer_home_win)
     df["home_win"] = df["GAME_ID"].map(home_results).astype(np.float32)
 
     grouped = df.groupby("GAME_ID", sort=False)
