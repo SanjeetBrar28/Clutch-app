@@ -24,41 +24,32 @@ class LSTMWinProbModel(nn.Module):
     ):
         super().__init__()
 
+        default_dims = {
+            "event_category": 32,
+            "EVENTMSGTYPE": 16,
+            "EVENTMSGACTIONTYPE": 16,
+            "possession_team": 32,
+            "PLAYER1_TEAM_ABBREVIATION": 32,
+        }
         if embedding_dims is None:
-            embedding_dims = {
-                "event_category": 32,
-                "EVENTMSGTYPE": 16,
-                "possession_team": 32,
-            }
+            embedding_dims = default_dims
+        else:
+            for key, val in default_dims.items():
+                embedding_dims.setdefault(key, val)
 
-        self.vocab_sizes = vocab_sizes
-        self.embedding_dims = embedding_dims
-
-        self.event_category_emb = nn.Embedding(
-            vocab_sizes.get("event_category", 2),
-            embedding_dims.get("event_category", 32),
-            padding_idx=0,
-        )
-        self.eventmsgtype_emb = nn.Embedding(
-            vocab_sizes.get("EVENTMSGTYPE", 2),
-            embedding_dims.get("EVENTMSGTYPE", 16),
-            padding_idx=0,
-        )
-        self.possession_emb = nn.Embedding(
-            vocab_sizes.get("possession_team", 2),
-            embedding_dims.get("possession_team", 32),
-            padding_idx=0,
-        )
+        self.embeddings = nn.ModuleDict()
+        total_emb_dim = 0
+        for name, vocab_size in vocab_sizes.items():
+            emb_dim = embedding_dims.get(name, 16)
+            self.embeddings[name] = nn.Embedding(vocab_size, emb_dim, padding_idx=0)
+            total_emb_dim += emb_dim
 
         self.numeric_proj = nn.Sequential(
             nn.Linear(numeric_dim, numeric_projection_dim),
             nn.ReLU(),
         )
 
-        lstm_input_dim = numeric_projection_dim
-        lstm_input_dim += embedding_dims.get("event_category", 32)
-        lstm_input_dim += embedding_dims.get("EVENTMSGTYPE", 16)
-        lstm_input_dim += embedding_dims.get("possession_team", 32)
+        lstm_input_dim = numeric_projection_dim + total_emb_dim
 
         self.lstm = nn.LSTM(
             input_size=lstm_input_dim,
@@ -87,11 +78,10 @@ class LSTMWinProbModel(nn.Module):
         """
 
         num_repr = self.numeric_proj(numeric_features)
-        emb_event = self.event_category_emb(categorical_features["event_category"])
-        emb_msg = self.eventmsgtype_emb(categorical_features["EVENTMSGTYPE"])
-        emb_poss = self.possession_emb(categorical_features["possession_team"])
-
-        lstm_input = torch.cat([num_repr, emb_event, emb_msg, emb_poss], dim=-1)
+        embeddings = [
+            self.embeddings[name](categorical_features[name]) for name in self.embeddings.keys()
+        ]
+        lstm_input = torch.cat([num_repr] + embeddings, dim=-1)
         lstm_out, _ = self.lstm(lstm_input)
         lstm_out = self.dropout(lstm_out)
         logits = self.output_layer(lstm_out).squeeze(-1)

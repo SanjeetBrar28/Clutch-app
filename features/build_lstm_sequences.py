@@ -58,7 +58,13 @@ def _compute_numeric_stats(df: pd.DataFrame, columns: List[str]) -> Dict[str, Di
 def build_lstm_sequences(
     df: pd.DataFrame,
     numeric_columns: List[str] | None = None,
-    categorical_columns: Tuple[str, str, str] = ("event_category", "EVENTMSGTYPE", "possession_team"),
+    categorical_columns: Tuple[str, ...] = (
+        "event_category",
+        "EVENTMSGTYPE",
+        "EVENTMSGACTIONTYPE",
+        "possession_team",
+        "PLAYER1_TEAM_ABBREVIATION",
+    ),
     vocab_path: Path = VOCAB_PATH,
 ) -> Dict[str, Dict[str, Any]]:
     """
@@ -83,30 +89,49 @@ def build_lstm_sequences(
         "score_margin_home",
         "total_seconds_remaining",
         "seconds_remaining_period",
-        "home_score",
-        "away_score",
+        "abs_score_margin",
+        "game_clock_ratio",
         "leverage_index",
-        "is_home",
+        "possession_change",
+        "turnover_flag",
+        "foul_flag",
     ]
     if numeric_columns:
         base_numeric_cols = numeric_columns
 
-    _ensure_columns(df, ["GAME_ID", "EVENTNUM", "home_score", "away_score"])
-    for col in base_numeric_cols:
+    _ensure_columns(
+        df,
+        [
+            "GAME_ID",
+            "EVENTNUM",
+            "score_margin_int",
+            "tracked_team_is_home",
+            "total_seconds_remaining",
+            "seconds_remaining_period",
+        ],
+    )
+    # Ensure score_margin_home exists (home-team perspective)
+    if "score_margin_home" not in df.columns:
+        if "score_margin_int" in df.columns and "tracked_team_is_home" in df.columns:
+            df["score_margin_home"] = np.where(
+                df["tracked_team_is_home"].astype(int) == 1,
+                df["score_margin_int"],
+                -df["score_margin_int"],
+            )
+        else:
+            raise ValueError("Need score_margin_int and tracked_team_is_home to compute score_margin_home.")
+
+    # Derived numeric columns
+    df["abs_score_margin"] = df["score_margin_home"].abs()
+    if "game_clock_ratio" not in df.columns:
+        total_seconds = df["total_seconds_remaining"].astype(float)
+        df["game_clock_ratio"] = total_seconds / (48 * 60)
+    if "leverage_index" not in df.columns:
+        df["leverage_index"] = 1.0
+    for col in ["possession_change", "turnover_flag", "foul_flag"]:
         if col not in df.columns:
-            if col == "score_margin_home":
-                if "score_margin_int" in df.columns and "tracked_team_is_home" in df.columns:
-                    df["score_margin_home"] = np.where(
-                        df["tracked_team_is_home"].astype(int) == 1,
-                        df["score_margin_int"],
-                        -df["score_margin_int"],
-                    )
-                else:
-                    raise ValueError("Need score_margin_int and tracked_team_is_home to compute score_margin_home.")
-            elif col == "leverage_index":
-                df["leverage_index"] = 1.0
-            else:
-                raise ValueError(f"Column '{col}' required for numeric features.")
+            df[col] = 0.0
+        df[col] = df[col].fillna(0).astype(float)
 
     df = df.sort_values(["GAME_ID", "EVENTNUM"]).reset_index(drop=True)
 
@@ -121,13 +146,13 @@ def build_lstm_sequences(
     vocab_store: Dict[str, Dict[str, int]] = {}
     categorical_data: Dict[str, np.ndarray] = {}
     for cat_col in categorical_columns:
-        if cat_col in df.columns:
-            vocab = _build_vocab(df[cat_col])
-            vocab_store[cat_col] = vocab
-            categorical_data[cat_col] = _map_series_to_ids(df[cat_col], vocab)
-        else:
-            vocab_store[cat_col] = {"<PAD>": 0, "<UNK>": 1}
-            categorical_data[cat_col] = np.full(len(df), 1, dtype=np.int64)
+        if cat_col not in df.columns:
+            df[cat_col] = "" if cat_col == "PLAYER1_TEAM_ABBREVIATION" else -1
+        if cat_col == "PLAYER1_TEAM_ABBREVIATION":
+            df[cat_col] = df[cat_col].fillna("").astype(str).str.upper()
+        vocab = _build_vocab(df[cat_col])
+        vocab_store[cat_col] = vocab
+        categorical_data[cat_col] = _map_series_to_ids(df[cat_col], vocab)
 
     # Persist vocabularies + normalization stats
     vocab_payload = {
