@@ -63,7 +63,6 @@ def build_lstm_sequences(
         "EVENTMSGTYPE",
         "EVENTMSGACTIONTYPE",
         "possession_team",
-        "PLAYER1_TEAM_ABBREVIATION",
     ),
     vocab_path: Path = VOCAB_PATH,
 ) -> Dict[str, Dict[str, Any]]:
@@ -154,9 +153,7 @@ def build_lstm_sequences(
     categorical_data: Dict[str, np.ndarray] = {}
     for cat_col in categorical_columns:
         if cat_col not in df.columns:
-            df[cat_col] = "" if cat_col == "PLAYER1_TEAM_ABBREVIATION" else -1
-        if cat_col == "PLAYER1_TEAM_ABBREVIATION":
-            df[cat_col] = df[cat_col].fillna("").astype(str).str.upper()
+            df[cat_col] = -1
         vocab = _build_vocab(df[cat_col])
         vocab_store[cat_col] = vocab
         categorical_data[cat_col] = _map_series_to_ids(df[cat_col], vocab)
