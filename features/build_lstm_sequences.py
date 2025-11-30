@@ -61,7 +61,6 @@ def build_lstm_sequences(
     categorical_columns: Tuple[str, ...] = (
         "event_category",
         "EVENTMSGTYPE",
-        "EVENTMSGACTIONTYPE",
         "possession_team",
     ),
     vocab_path: Path = VOCAB_PATH,
