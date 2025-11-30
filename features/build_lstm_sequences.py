@@ -92,6 +92,7 @@ def build_lstm_sequences(
         "abs_score_margin",
         "game_clock_ratio",
         "leverage_index",
+        "is_home",
         "possession_change",
         "turnover_flag",
         "foul_flag",
@@ -108,6 +109,7 @@ def build_lstm_sequences(
             "tracked_team_is_home",
             "total_seconds_remaining",
             "seconds_remaining_period",
+            "is_home",
         ],
     )
     # Ensure score_margin_home exists (home-team perspective)
@@ -128,7 +130,7 @@ def build_lstm_sequences(
         df["game_clock_ratio"] = total_seconds / (48 * 60)
     if "leverage_index" not in df.columns:
         df["leverage_index"] = 1.0
-    for col in ["possession_change", "turnover_flag", "foul_flag"]:
+    for col in ["is_home", "possession_change", "turnover_flag", "foul_flag"]:
         if col not in df.columns:
             df[col] = 0.0
         df[col] = df[col].fillna(0).astype(float)
@@ -137,7 +139,7 @@ def build_lstm_sequences(
 
     # Numeric normalization stats (z-score)
     # Numeric normalization stats (z-score), excluding binary indicators
-    binary_cols = {"possession_change", "turnover_flag", "foul_flag"}
+    binary_cols = {"is_home", "possession_change", "turnover_flag", "foul_flag"}
     stats_cols = [col for col in base_numeric_cols if col not in binary_cols]
     numeric_stats = _compute_numeric_stats(df, stats_cols)
     for col in stats_cols:
