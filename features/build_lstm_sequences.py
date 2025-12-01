@@ -60,6 +60,8 @@ def build_lstm_sequences(
     numeric_columns: List[str] | None = None,
     categorical_columns: Tuple[str, str, str] = ("event_category", "EVENTMSGTYPE", "possession_team"),
     vocab_path: Path = VOCAB_PATH,
+    use_existing: bool = False,
+    vocab_payload: Dict[str, Any] | None = None,
 ) -> Dict[str, Dict[str, Any]]:
     """
     Convert play-by-play events into per-game sequences for LSTM training.
@@ -79,19 +81,34 @@ def build_lstm_sequences(
     """
 
     df = df.copy()
-    base_numeric_cols = [
-        "score_margin_home",
-        "total_seconds_remaining",
-        "seconds_remaining_period",
-        "home_score",
-        "away_score",
-        "leverage_index",
-        "is_home",
-    ]
-    if numeric_columns:
-        base_numeric_cols = numeric_columns
+    df["_original_index"] = np.arange(len(df))
+    vocab_payload_internal = vocab_payload
+    if use_existing:
+        if vocab_payload_internal is None:
+            if not vocab_path.exists():
+                raise FileNotFoundError(f"Vocab file not found at {vocab_path}")
+            with vocab_path.open("r") as fp:
+                vocab_payload_internal = json.load(fp)
+        if vocab_payload_internal is None:
+            raise ValueError("Existing vocab payload required for inference.")
+        base_numeric_cols = vocab_payload_internal["numeric_features"]
+        numeric_stats = vocab_payload_internal["numeric_stats"]
+        categorical_columns = tuple(vocab_payload_internal["categorical_features"])
+        vocab_store = vocab_payload_internal["categorical"]
+    else:
+        base_numeric_cols = [
+            "score_margin_home",
+            "total_seconds_remaining",
+            "seconds_remaining_period",
+            "home_score",
+            "away_score",
+            "leverage_index",
+            "is_home",
+        ]
+        if numeric_columns:
+            base_numeric_cols = numeric_columns
 
-    _ensure_columns(df, ["GAME_ID", "EVENTNUM", "home_score", "away_score"])
+    _ensure_columns(df, ["GAME_ID", "EVENTNUM"])
     for col in base_numeric_cols:
         if col not in df.columns:
             if col == "score_margin_home":
@@ -106,39 +123,63 @@ def build_lstm_sequences(
             elif col == "leverage_index":
                 df["leverage_index"] = 1.0
             else:
-                raise ValueError(f"Column '{col}' required for numeric features.")
+                # If column truly missing, create zeros placeholder
+                df[col] = 0.0
 
     df = df.sort_values(["GAME_ID", "EVENTNUM"]).reset_index(drop=True)
 
     # Numeric normalization stats (z-score)
-    numeric_stats = _compute_numeric_stats(df, base_numeric_cols)
-    for col in base_numeric_cols:
-        mean = numeric_stats[col]["mean"]
-        std = numeric_stats[col]["std"]
-        df[col] = ((df[col] - mean) / std).fillna(0.0)
+    if use_existing:
+        for col in base_numeric_cols:
+            stats = numeric_stats.get(col)
+            if stats is None:
+                raise ValueError(f"Missing numeric stats for column '{col}' in vocab payload.")
+            mean = stats["mean"]
+            std = stats["std"]
+            if std == 0 or np.isnan(std):
+                std = 1.0
+            df[col] = ((df[col] - mean) / std).fillna(0.0)
+    else:
+        numeric_stats = _compute_numeric_stats(df, base_numeric_cols)
+        for col in base_numeric_cols:
+            mean = numeric_stats[col]["mean"]
+            std = numeric_stats[col]["std"]
+            df[col] = ((df[col] - mean) / std).fillna(0.0)
 
     # Build categorical vocabularies
+    vocab_store_data: Dict[str, Dict[str, int]] | None = None
+    if use_existing:
+        vocab_store_data = vocab_payload_internal["categorical"]
+
     vocab_store: Dict[str, Dict[str, int]] = {}
     categorical_data: Dict[str, np.ndarray] = {}
-    for cat_col in categorical_columns:
-        if cat_col in df.columns:
-            vocab = _build_vocab(df[cat_col])
-            vocab_store[cat_col] = vocab
+    if use_existing:
+        vocab_store = vocab_store_data or {}
+        for cat_col in categorical_columns:
+            vocab = vocab_store.get(cat_col)
+            if vocab is None:
+                raise ValueError(f"Missing vocabulary for categorical column '{cat_col}'.")
             categorical_data[cat_col] = _map_series_to_ids(df[cat_col], vocab)
-        else:
-            vocab_store[cat_col] = {"<PAD>": 0, "<UNK>": 1}
-            categorical_data[cat_col] = np.full(len(df), 1, dtype=np.int64)
+    else:
+        vocab_store: Dict[str, Dict[str, int]] = {}
+        for cat_col in categorical_columns:
+            if cat_col in df.columns:
+                vocab = _build_vocab(df[cat_col])
+                vocab_store[cat_col] = vocab
+                categorical_data[cat_col] = _map_series_to_ids(df[cat_col], vocab)
+            else:
+                vocab_store[cat_col] = {"<PAD>": 0, "<UNK>": 1}
+                categorical_data[cat_col] = np.full(len(df), 1, dtype=np.int64)
 
-    # Persist vocabularies + normalization stats
-    vocab_payload = {
-        "categorical": vocab_store,
-        "numeric_stats": numeric_stats,
-        "numeric_features": base_numeric_cols,
-        "categorical_features": list(categorical_columns),
-    }
-    vocab_path.parent.mkdir(parents=True, exist_ok=True)
-    with vocab_path.open("w") as fp:
-        json.dump(vocab_payload, fp, indent=2)
+        vocab_payload_internal = {
+            "categorical": vocab_store,
+            "numeric_stats": numeric_stats,
+            "numeric_features": base_numeric_cols,
+            "categorical_features": list(categorical_columns),
+        }
+        vocab_path.parent.mkdir(parents=True, exist_ok=True)
+        with vocab_path.open("w") as fp:
+            json.dump(vocab_payload_internal, fp, indent=2)
 
     # Prepare sequences per game
     game_sequences: Dict[str, Dict[str, Any]] = {}
@@ -170,6 +211,7 @@ def build_lstm_sequences(
             "target": target,
             "mask": mask,
             "categorical": cat_seq,
+            "indices": group["_original_index"].to_numpy()
         }
 
     return game_sequences

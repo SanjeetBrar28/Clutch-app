@@ -1,0 +1,105 @@
+{
+  "categorical": {
+    "event_category": {
+      "<PAD>": 0,
+      "<UNK>": 1,
+      "SHOT": 2,
+      "REBOUND": 3,
+      "FOUL": 4,
+      "FREE_THROW": 5,
+      "TURNOVER": 6,
+      "SUBSTITUTION": 7
+    },
+    "EVENTMSGTYPE": {
+      "<PAD>": 0,
+      "<UNK>": 1,
+      "Missed Shot": 2,
+      "Rebound": 3,
+      "Foul": 4,
+      "Free Throw": 5,
+      "Turnover": 6,
+      "Made Shot": 7,
+      "Substitution": 8
+    },
+    "possession_team": {
+      "<PAD>": 0,
+      "<UNK>": 1,
+      "BOS": 2,
+      "DEN": 3,
+      "CHA": 4,
+      "NYK": 5,
+      "LAL": 6,
+      "PHX": 7,
+      "ORL": 8,
+      "NOP": 9,
+      "PHI": 10,
+      "NZB": 11,
+      "MEM": 12,
+      "DAL": 13,
+      "OKC": 14,
+      "SAS": 15,
+      "CLE": 16,
+      "CHI": 17,
+      "DET": 18,
+      "IND": 19,
+      "ATL": 20,
+      "LAC": 21,
+      "BKN": 22,
+      "WAS": 23,
+      "GSW": 24,
+      "SAC": 25,
+      "MIA": 26,
+      "UTA": 27,
+      "MIN": 28,
+      "POR": 29,
+      "TOR": 30,
+      "MIL": 31,
+      "HOU": 32,
+      "ULM": 33
+    }
+  },
+  "numeric_stats": {
+    "score_margin_home": {
+      "mean": 1.085656854706189,
+      "std": 11.96260678987776
+    },
+    "total_seconds_remaining": {
+      "mean": 1401.3903416315054,
+      "std": 830.2037118950278
+    },
+    "seconds_remaining_period": {
+      "mean": 337.67950177770547,
+      "std": 205.05135257145938
+    },
+    "home_score": {
+      "mean": NaN,
+      "std": 1.0
+    },
+    "away_score": {
+      "mean": NaN,
+      "std": 1.0
+    },
+    "leverage_index": {
+      "mean": 0.09095378729628671,
+      "std": 0.12158417116781318
+    },
+    "is_home": {
+      "mean": 0.49997842187557057,
+      "std": 0.49999999953438456
+    }
+  },
+  "numeric_features": [
+    "score_margin_home",
+    "total_seconds_remaining",
+    "seconds_remaining_period",
+    "home_score",
+    "away_score",
+    "leverage_index",
+    "is_home"
+  ],
+  "categorical_features": [
+    "event_category",
+    "EVENTMSGTYPE",
+    "possession_team"
+  ]
+}

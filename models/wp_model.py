@@ -223,6 +223,12 @@ class WinProbabilityModel:
             Array of win probabilities
         """
         return self.predict(df)
+
+    def predict_wp(self, df: pd.DataFrame) -> np.ndarray:
+        """
+        Interface used by ClutchScoreCalculator (alias to predict()).
+        """
+        return self.predict(df)
     
     def save_model(self, filename: str = 'win_prob_model.pkl'):
         """

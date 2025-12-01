@@ -24,6 +24,13 @@ from features.build_lstm_sequences import VOCAB_PATH, build_lstm_sequences
 from models.wp_seq_model import LSTMWinProbModel, masked_bce_loss
 
 
+DEFAULT_EMBEDDING_DIMS = {
+    "event_category": 32,
+    "EVENTMSGTYPE": 16,
+    "possession_team": 32,
+}
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Train LSTM Win Probability model.")
     parser.add_argument(
@@ -187,6 +194,7 @@ def main() -> None:
     model = LSTMWinProbModel(
         numeric_dim=numeric_dim,
         vocab_sizes=vocab_sizes,
+        embedding_dims=DEFAULT_EMBEDDING_DIMS,
         hidden_size=args.hidden_size,
         num_layers=args.num_layers,
         dropout=args.dropout,
@@ -264,6 +272,20 @@ def main() -> None:
     artifacts_dir.mkdir(parents=True, exist_ok=True)
     model_path = artifacts_dir / "wp_lstm_model.pt"
     torch.save(best_state or model.state_dict(), model_path)
+
+    config_data = {
+        "hidden_size": args.hidden_size,
+        "num_layers": args.num_layers,
+        "dropout": args.dropout,
+        "numeric_projection_dim": args.numeric_projection_dim,
+        "embedding_dims": DEFAULT_EMBEDDING_DIMS,
+        "numeric_features": vocab_payload["numeric_features"],
+        "categorical_features": vocab_payload["categorical_features"],
+        "model_path": str(model_path),
+    }
+    config_path = artifacts_dir / "wp_lstm_config.json"
+    with config_path.open("w") as fp:
+        json.dump(config_data, fp, indent=2)
 
     metrics_path = Path("data/processed/wp_lstm_training_metrics.json")
     metrics_path.parent.mkdir(parents=True, exist_ok=True)

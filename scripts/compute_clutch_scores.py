@@ -24,6 +24,7 @@ project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
 from models.wp_model import WinProbabilityModel
+from models.wp_lstm_predictor import LSTMWPPredictor
 from models.clutch_score import ClutchScoreCalculator
 from features.build_leverage_features import build_wp_features, compute_leverage_weight
 from backend.services.data_ingestion.game_utils import GameUtils
@@ -267,6 +268,37 @@ Examples:
         default='models/artifacts',
         help='Directory to save/load WP model (default: models/artifacts)'
     )
+    parser.add_argument(
+        '--wp-model-type',
+        type=str,
+        choices=['logistic', 'lstm'],
+        default='logistic',
+        help='Which WP model to use: logistic (baseline) or lstm (sequential).'
+    )
+    parser.add_argument(
+        '--lstm-model-path',
+        type=str,
+        default='models/artifacts/wp_lstm_model.pt',
+        help='Path to trained LSTM WP model weights.'
+    )
+    parser.add_argument(
+        '--lstm-config-path',
+        type=str,
+        default='models/artifacts/wp_lstm_config.json',
+        help='Path to LSTM WP model config JSON.'
+    )
+    parser.add_argument(
+        '--lstm-vocab-path',
+        type=str,
+        default='data/processed/lstm_vocabs.json',
+        help='Path to LSTM vocab/stats JSON.'
+    )
+    parser.add_argument(
+        '--lstm-device',
+        type=str,
+        default='cpu',
+        help='Device for LSTM inference (e.g., cpu, cuda).'
+    )
     
     parser.add_argument(
         '--output-dir',
@@ -387,28 +419,44 @@ def main():
         # Now build features using score_margin_home
         df_features = build_wp_features(df, score_margin_col='score_margin_home')
         
-        # Initialize WP model
-        logger.info("\n📊 Initializing Win Probability model...")
-        wp_model = WinProbabilityModel(model_dir=args.model_dir, random_state=42)
-        
-        # Train or load model
-        logger.info("\n🎓 Training/loading WP model...")
-        train_metrics = wp_model.train(
-            df=df_features,
-            game_outcomes=game_outcomes,
-            retrain=args.retrain
-        )
+        os.makedirs(args.output_dir, exist_ok=True)
+        calibration_plot_filename = 'wp_calibration_plot.png'
+
+        if args.wp_model_type == 'lstm':
+            logger.info("\n📊 Loading LSTM Win Probability model...")
+            wp_model = LSTMWPPredictor(
+                model_path=args.lstm_model_path,
+                config_path=args.lstm_config_path,
+                vocab_path=args.lstm_vocab_path,
+                device=args.lstm_device,
+            )
+            train_metrics = {
+                'status': 'loaded',
+                'type': 'lstm',
+                'model_path': args.lstm_model_path
+            }
+            logger.info(f"Loaded LSTM model from {args.lstm_model_path}")
+            logger.info("\n📈 Evaluating model calibration...")
+            calibration_plot_filename = 'wp_lstm_calibration_plot.png'
+            calibration_plot_path = os.path.join(args.output_dir, calibration_plot_filename)
+            wp_model.plot_calibration(df_features, game_outcomes, save_path=calibration_plot_path)
+            logger.info(f"Calibration plot saved to {calibration_plot_path}")
+        else:
+            logger.info("\n📊 Initializing Win Probability model...")
+            wp_model = WinProbabilityModel(model_dir=args.model_dir, random_state=42)
+            logger.info("\n🎓 Training/loading WP model...")
+            train_metrics = wp_model.train(
+                df=df_features,
+                game_outcomes=game_outcomes,
+                retrain=args.retrain
+            )
+            logger.info(f"Model metrics: {train_metrics}")
+            logger.info("\n📈 Evaluating model calibration...")
+            calibration_plot_path = os.path.join(args.output_dir, calibration_plot_filename)
+            wp_model.plot_calibration(df_features, game_outcomes, save_path=calibration_plot_path)
+            logger.info(f"Calibration plot saved to {calibration_plot_path}")
         
         logger.info(f"Model metrics: {train_metrics}")
-        
-        # Evaluate calibration
-        logger.info("\n📈 Evaluating model calibration...")
-        calibration = wp_model.evaluate_calibration(df_features, game_outcomes)
-        
-        # Plot calibration
-        calibration_plot_path = os.path.join(args.output_dir, 'wp_calibration_plot.png')
-        wp_model.plot_calibration(df_features, game_outcomes, save_path=calibration_plot_path)
-        logger.info(f"Calibration plot saved to {calibration_plot_path}")
         
         # Initialize Clutch Score Calculator
         logger.info("\n⚡ Computing Win Probability Added (WPA)...")

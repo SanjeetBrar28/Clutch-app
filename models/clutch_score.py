@@ -9,9 +9,7 @@ import os
 import logging
 import numpy as np
 import pandas as pd
-from typing import Dict, List, Optional
-
-from models.wp_model import WinProbabilityModel
+from typing import Any, Dict, List, Optional
 from features.build_leverage_features import build_wp_features, compute_leverage_weight
 
 logger = logging.getLogger(__name__)
@@ -22,7 +20,7 @@ class ClutchScoreCalculator:
     Calculate Win Probability Added (WPA) and aggregate to player-level scores.
     """
     
-    def __init__(self, wp_model: WinProbabilityModel):
+    def __init__(self, wp_model: Any):
         """
         Initialize Clutch Score Calculator.
         
@@ -83,7 +81,12 @@ class ClutchScoreCalculator:
         
         # Calculate WP_before (state before event)
         # For each event, we need to compute WP from the state at that moment
-        wpa_df['WP_before'] = self.wp_model.predict(wpa_df)
+        if hasattr(self.wp_model, "predict_wp"):
+            wpa_df['WP_before'] = self.wp_model.predict_wp(wpa_df)
+        elif hasattr(self.wp_model, "predict"):
+            wpa_df['WP_before'] = self.wp_model.predict(wpa_df)
+        else:
+            raise AttributeError("WP model must implement predict_wp or predict method.")
         
         # Calculate WP_after (state after event)
         # We compute WP_after by looking at the next event's state (which represents
@@ -127,6 +130,18 @@ class ClutchScoreCalculator:
         
         # Calculate WPA_weighted
         wpa_df['WPA_weighted'] = wpa_df['delta_wp'] * wpa_df['leverage_weight']
+
+        # Re-center WPA per game so weighted contributions sum to ~0
+        game_bias = wpa_df.groupby('GAME_ID')['WPA_weighted'].transform('sum')
+        game_weight_sum = wpa_df.groupby('GAME_ID')['leverage_weight'].transform('sum').replace(0, np.nan)
+        adjustment = (game_bias / game_weight_sum) * wpa_df['leverage_weight']
+        adjustment = adjustment.fillna(0.0)
+        wpa_df['WPA_weighted'] = wpa_df['WPA_weighted'] - adjustment
+        wpa_df['delta_wp'] = np.where(
+            wpa_df['leverage_weight'] != 0,
+            wpa_df['WPA_weighted'] / wpa_df['leverage_weight'],
+            0.0
+        )
         
         logger.info(f"WPA computed. Mean delta_wp: {wpa_df['delta_wp'].mean():.4f}, "
                    f"Mean WPA_weighted: {wpa_df['WPA_weighted'].mean():.4f}")
@@ -177,7 +192,7 @@ class ClutchScoreCalculator:
             f"Total WPA after attribution: {wpa_df['player_wpa'].sum():.4f} "
             "(should be very close to 0 for league-wide attribution)."
         )
-
+        
         return wpa_df
     
     def aggregate_player_wpa(self, wpa_df: pd.DataFrame, deduplicate_by_game: bool = False) -> pd.DataFrame:
